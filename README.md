@@ -1,4 +1,7 @@
 # Langgao
+This is a remake of the previous langgao.info website with Angular 8 and Angular Materials. This version aims to reduce redundant code and promote code reuse while also boost performace. 
+
+The project is 100% jQuery Free!
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.1.
 
