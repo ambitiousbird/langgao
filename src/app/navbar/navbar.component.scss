@@ -16,7 +16,7 @@
 
 #mainNav {
     border-bottom: 1px solid rgba(33, 37, 41, 0.1);
-    background-color: #fff;
+    background-color: #d2b2b2;
     font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
     -webkit-transition: all 0.2s;
     -moz-transition: all 0.2s;
@@ -61,7 +61,7 @@
   @media (min-width: 992px) {
     #mainNav {
       border-color: transparent;
-      background-color: transparent;
+      // background-color: transparent;
     }
     #mainNav .navbar-brand {
       color: rgba(255, 255, 255, 0.7);
