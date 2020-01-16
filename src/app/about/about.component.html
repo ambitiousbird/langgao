@@ -1,118 +1,57 @@
-<section id="begining" class="view hm-gradient">
-    <!-- Slideshow container -->
-    <div class="slideshow-container">
-        <!-- Full-width images with number and caption text -->
-        <div class="mySlides fade">
-                <div id="home-intro-1" class="container flex-center home-intro">
-                        <div class="row flex-center pt-5 mt-3">
-                            <div class="col-md-6 text-center text-md-left margins">
-                                <div class="white-text capabilities">
-                                    <h1 class="h1-responsive fadeInLeft" data-wow-delay="0.3s">Web Development </h1>
-                                        <hr class="hr-light fadeInLeft" data-wow-delay="0.3s">
-                                        <h6 class="wow fadeInLeft" data-wow-delay="0.3s">
-                                            <ul class="capability">
-                                                <li>Responsive and adaptive design</li>
-                                                <li>Development in React.js, AngularJS, Node.js,and more </li>
-                                                <li>Application deployment on Amazon Web Services and Heroku</li>
-                                                <li>Algorithm design for optimum performance</li>
-                                            </ul>
-                                                <!-- A strong sense of ownership and responsibility for code quality that follows best practices
-                                                A strong passion for learning and adapting to new technologies
-                                                Ability to think critically and independent. -->
-                                        </h6>
-                                        <br>
-                                        <a href="/projects#web" class="btn btn-outline-white fadeInLeft" data-wow-delay="0.3s">View Demos</a>
-                                </div>
-                            </div>
-                            <div id="home-image-small" class="col-md-6 wow fadeInRight d-flex justify-content-center" data-wow-delay="0.3s">
-                                <img  src="../../assets/img/small/webdesign.jpg" alt="" class="img-responsive small-image">
-                            </div>
-                        </div>
-                </div>
-        </div>
-    
-        <div class="mySlides fade">
-            <div id="home-intro-2" class="container flex-center home-intro">
-                <div class="row flex-center pt-5 mt-3">
-                    <div class="col-md-6 text-center text-md-left margins">
-                        <div class="white-text capabilities">
-                            <h1 class="h1-responsive fadeInLeft" data-wow-delay="0.3s">Mobile Development </h1>
-                                <hr class="hr-light fadeInLeft" data-wow-delay="0.3s">
-                                <h6 class="wow fadeInLeft" data-wow-delay="0.3s">
-                                    <ul class="capability">
-                                        <li>Unit and end-to-end testing</li>
-                                        <li>Database structure design</li> 
-                                        <li>Integrating RESTful service architectures, and Web architecture components</li>
-                                    </ul>
-                                </h6>
-                                <br>
-                                <a href="/projects#mobile" class="btn btn-outline-white fadeInLeft" data-wow-delay="0.3s">View Demos</a>
-                        </div>
-                    </div>
-                    <div id="home-image-small" class="col-md-6 wow fadeInRight d-flex justify-content-center" data-wow-delay="0.3s">
-                        <img  id="home-image-mobile" src="../../assets/img/small/Home@3x_iphonexspacegrey_portrait.png" alt="" class="img-responsive">
-                    </div>
-                </div>
-            </div>
-        </div>
-    
-        <div class="mySlides fade">
-            <div id="home-intro-3" class="container flex-center home-intro">
-                <div class="row flex-center pt-5 mt-3">
-                    <div class="col-md-6 text-center text-md-left margins">
-                        <div class="white-text capabilities">
-                            <h1 class="h1-responsive fadeInLeft" data-wow-delay="0.3s">Data Mining and Computing Systems </h1>
-                                <hr class="hr-light fadeInLeft" data-wow-delay="0.3s">
-                                <h6 class="wow fadeInLeft" data-wow-delay="0.3s">
-                                    <ul class="capability">
-                                        <li>Java, JavaScript, Python, C and more</li>
-                                        <li>Data mining and analysis</li>
-                                        <li>Deep, feed-forward artificial neural network</li>
-                                    </ul>
-                                </h6>
-                                <br>
-                                <a href="projects#machine-learning" class="btn btn-outline-white fadeInLeft" data-wow-delay="0.3s">View Projects</a>
-                        </div>
-                    </div>
-                    <div id="home-image-small" class="col-md-6 wow fadeInRight d-flex justify-content-center" data-wow-delay="0.3s">
-                        <img  src="../../assets/img/small/statistic.png" alt="" class="img-responsive small-image">
-                    </div>
-                </div>
-            </div>
-        </div>
-    
-        <!-- Next and previous buttons -->
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-
-    </div>
-    
-    <!-- The dots/circles -->
-    <div class="dots" style="text-align:center">
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
-    </div> 
-</section>
-
-
+<mdb-carousel class="carousel slide carousel-fade" [animation]="'fade'">
+    <mdb-carousel-item>
+      <div class="view w-100">
+        <img class="d-block w-100" src="../../assets/img/background/code.jpg" alt="First slide">
+        <div class="mask rgba-black-strong waves-light" mdbWavesEffect></div>
+      </div>
+      <div class="carousel-caption">
+        <h3 class="h3-responsive">Web Development</h3>
+        <ul class="capability">
+            <li>Responsive and adaptive design</li>
+            <li>Development in React.js, AngularJS, Node.js,and more </li>
+            <li>Application deployment on Amazon Web Services and Heroku</li>
+            <li>Algorithm design for optimum performance</li>
+        </ul>
+        <a href="/projects#web" class="btn btn-outline-white fadeInLeft">View Demos</a>
+            <!-- A strong sense of ownership and responsibility for code quality that follows best practices
+            A strong passion for learning and adapting to new technologies
+            Ability to think critically and independent. -->
+      </div>
+    </mdb-carousel-item>
+    <mdb-carousel-item>
+      <div class="view w-100">
+        <img class="d-block w-100" src="../../assets/img/background/laptop.jpg" alt="Second slide">
+        <div class="mask rgba-black-slight waves-light" mdbWavesEffect></div>
+      </div>
+      <div class="carousel-caption">
+        <h3 class="h3-responsive">Mobile Development</h3>
+        <ul class="capability">
+            <li>Unit and end-to-end testing</li>
+            <li>Database structure design</li> 
+            <li>Integrating RESTful service architectures, and Web architecture components</li>
+        </ul>
+        <a href="/projects#mobile" class="btn btn-outline-white fadeInLeft">View Demos</a>
+      </div>
+    </mdb-carousel-item>
+    <mdb-carousel-item>
+      <div class="view w-100">
+        <img class="d-block w-100" src="../../assets/img/background/computer-1245714.jpg" alt="Third slide">
+        <div class="mask rgba-black-slight waves-light" mdbWavesEffect></div>
+      </div>
+      <div class="carousel-caption">
+        <h3 class="h3-responsive">Data mining and algorithms</h3>
+        <ul class="capability">
+            <li>Java, JavaScript, Python, C and more</li>
+            <li>Data mining and analysis</li>
+            <li>Deep, feed-forward artificial neural network</li>
+        </ul>
+        <a href="projects#machine-learning" class="btn btn-outline-white fadeInLeft">View Projects</a>
+      </div>
+    </mdb-carousel-item>
+  </mdb-carousel>
 
 <div style="height: 100vh">
     <div id="about-me" class="flex-center flex-column">
-        <div id="background-wrap">
-            <div class="color-layer"></div>
-            <div class="bubble x1"></div>
-            <div class="bubble x2"></div>
-            <div class="bubble x3"></div>
-            <div class="bubble x4"></div>
-            <div class="bubble x5"></div>
-            <div class="bubble x6"></div>
-            <div class="bubble x7"></div>
-            <div class="bubble x8"></div>
-            <div class="bubble x9"></div>
-            <div class="bubble x10"></div>
-        </div>
         <h1 class="animated fadeIn mb-4 w3-animate-right wow animated bounce">About me</h1>
         <h5 class="animated fadeIn mb-3">
             Four years ago, after I got a bachalor degree in Chemical Engineering, 
