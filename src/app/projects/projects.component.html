@@ -1,109 +1,72 @@
-<section class="view hm-gradient">
-    <!-- Slideshow container -->
-    <div class="slideshow-container">
-        <!-- Full-width images with number and caption text -->
-        <div class="mySlides fade videoContainer">
-            <div class="video-overlay"></div>
-            <video id="videos" autoplay muted loop>
-                <source src="../../assets/videos/web-development.mp4" type="video/mp4">
+<!--Carousel Wrapper-->
+<mdb-carousel [isControls]="true" class="carousel slide" [animation]="'slide'">
+    <!--First slide-->
+    <mdb-carousel-item>
+        <!--Mask color-->
+        <div class="view">
+            <!--Video source-->
+            <video class="video-fluid" autoplay loop>
+                <source src="../../assets/videos/api.mp4" type="video/mp4" />
             </video>
-            <div class="container flex-center projects-intro">
-                <div class="row flex-center pt-5 mt-3">
-                    <div class="col-md-6 text-center text-md-left margins">
-                        <div class="white-text capabilities">
-                            <h1 class="h1-responsive fadeInLeft" data-wow-delay="0.3s">Web development </h1>
-                            <hr class="hr-light fadeInLeft" data-wow-delay="0.3s">
-                            <h6 class="wow fadeInLeft" data-wow-delay="0.3s">
-                                <ul class="capability">
-                                    <li>Responsive and adaptive design</li>
-                                    <li>Development in jQuery, React.js, Node.js,and more </li>
-                                    <li>Application deployment on Amazon Web Services and Heroku</li>
-                                    <li>Algorithm design for optimum performance</li>
-                                </ul>
-                            </h6>
-                            <br>
-                            <a href="#web" class="btn btn-outline-white fadeInLeft" data-wow-delay="0.3s">View Demos</a>
-                        </div>
-                    </div>
-                    <div id="home-image-small" class="col-md-6 wow fadeInRight d-flex justify-content-center" data-wow-delay="0.3s">
-                        <img src="../../assets/img/small/webdesign.jpg" alt="" class="img-responsive small-image">
-                    </div>
-                </div>
-            </div>
+            <div class="mask rgba-indigo-light waves-light" mdbWavesEffect></div>
         </div>
 
-        <div class="mySlides fade videoContainer">
-            <div class="video-overlay"></div>
-            <video id="videos" autoplay muted loop>
-                <source src="../../assets/videos/Reading News on a Lenovo Smartphone.mp4" type="video/mp4">
-            </video>
-            <div class="container flex-center projects-intro">
-                <div class="row flex-center pt-5 mt-3">
-                    <div class="col-md-6 text-center text-md-left margins">
-                        <div class="white-text capabilities">
-                            <h1 class="h1-responsive fadeInLeft" data-wow-delay="0.3s">Mobile Development </h1>
-                            <hr class="hr-light fadeInLeft" data-wow-delay="0.3s">
-                            <h6 class="wow fadeInLeft" data-wow-delay="0.3s">
-                                <ul class="capability">
-                                    <li>Unit and end-to-end testing</li>
-                                    <li>Database structure design</li> 
-                                    <li>Integrating RESTful service architectures, and Web architecture components</li>
-                                </ul>
-                            </h6>
-                            <br>
-                            <a href="#mobile" class="btn btn-outline-white fadeInLeft" data-wow-delay="0.3s">View Demos</a>
-                        </div>
-                    </div>
-                    <div id="home-image-small" class="col-md-6 wow fadeInRight d-flex justify-content-center" data-wow-delay="0.3s">
-                        <img src="https://mdbootstrap.com/img/Mockups/Transparent/Small/iphone-admin.png" alt="" class="img-responsive">
-                    </div>
-                </div>
+        <!--Caption-->
+        <div class="carousel-caption">
+            <div class="animated fadeInDown">
+                <h3 class="h3-responsive">Light mask</h3>
+                <p>First text</p>
             </div>
         </div>
-
-        <div class="mySlides fade videoContainer">
-            <div class="video-overlay"></div>
-            <video id="videos" autoplay muted loop>
-                <source src="./videos/Source Code - 171.mp4" type="video/mp4">
+        <!--Caption-->
+    </mdb-carousel-item>
+    <!--/First slide-->
+    <!--Second slide-->
+    <mdb-carousel-item>
+        <!--Mask color-->
+        <div class="view">
+            <!--Video source-->
+            <video class="video-fluid" autoplay loop>
+                <source src="../../assets/videos/coding.mp4" type="video/mp4" />
             </video>
-            <div class="container flex-center projects-intro">
-                <div class="row flex-center pt-5 mt-3">
-                    <div class="col-md-6 text-center text-md-left margins">
-                        <div class="white-text capabilities">
-                            <h1 class="h1-responsive fadeInLeft" data-wow-delay="0.3s">Computing systems and machine learning</h1>
-                            <hr class="hr-light fadeInLeft" data-wow-delay="0.3s">
-                            <h6 class="wow fadeInLeft" data-wow-delay="0.3s">
-                                <ul class="capability">
-                                    <li>Java, JavaScript, Python, C and more</li>
-                                    <li>Data mining and analysis</li>
-                                    <li>Deep, feed-forward artificial neural network</li>
-                                </ul>
-                            </h6>
-                            <br>
-                            <a href="#machine-learning" class="btn btn-outline-white fadeInLeft" data-wow-delay="0.3s">View projects</a>
-                        </div>
-                    </div>
-                    <div id="home-image-small" class="col-md-6 wow fadeInRight d-flex justify-content-center" data-wow-delay="0.3s">
-                        <img src="../../assets/img/small/statistic.png" alt="" class="img-responsive small-image">
-                    </div>
-                </div>
+            <div class="mask rgba-purple-slight waves-light" mdbWavesEffect></div>
+        </div>
+
+        <!--Caption-->
+        <div class="carousel-caption">
+            <div class="animated fadeInDown">
+                <h3 class="h3-responsive">Super light mask</h3>
+                <p>Secondary text</p>
             </div>
         </div>
-        <!-- Next and previous buttons -->
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
-    </div>
+        <!--Caption-->
+    </mdb-carousel-item>
+    <!--/Second slide-->
+    <!--Third slide-->
+    <mdb-carousel-item>
+        <!--Mask color-->
+        <div class="view">
+            <!--Video source-->
+            <video class="video-fluid" autoplay loop disablePictureInPicture>
+                <source src="../../assets/videos/discussion.mp4" type="video/mp4" />
+            </video>
+            <div class="mask rgba-black-strong waves-light" mdbWavesEffect></div>
+        </div>
 
-    <!-- The dots/circles -->
-    <div class="dots" style="text-align:center">
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
-    </div>
-</section>
+        <!--Caption-->
+        <div class="carousel-caption">
+            <div class="animated fadeInDown">
+                <h3 class="h3-responsive">Strong mask</h3>
+                <p>Third text</p>
+            </div>
+        </div>
+        <!--Caption-->
+    </mdb-carousel-item>
+    <!--/Third slide-->
+</mdb-carousel>
+<!--Carousel Wrapper-->
 
-
-    <section id="web" class="text-center my-5">
+<section id="web" class="text-center my-5">
 
         <h2 class="h1-responsive font-weight-bold my-5">Web Development Demos</h2>
         <p class="grey-text w-responsive mx-auto mb-5">Full stack web development with React, Nodejs, Express, MongoDB, and more</p>
@@ -139,6 +102,27 @@
     <li data-target="#multi-item-example" data-slide-to="2" class="indicator"></li>
   </ol>
   <!--/.Indicators-->
+
+  <mdb-carousel [isControls]="true" class="carousel-multi-item multi-animation" [type]="'carousel-multi-item'" [animation]="'slide'">
+    <mdb-carousel-item *ngFor="let item of slides; let i = index">
+
+        <div class="col-md-4 pb-2" [ngClass]="{'d-none d-md-block': cardIndex !== 0}" *ngFor="let card of item; let cardIndex = index">
+        <mdb-card class="my-1 h-100">
+            <mdb-card-img [src]="card.img" alt="Card image cap"></mdb-card-img>
+            <mdb-card-body>
+            <mdb-card-title>
+                <h4>{{card.title}}</h4>
+            </mdb-card-title>
+            <p>{{card.description}}</p>
+            </mdb-card-body>
+            <mdb-card-footer>
+            <a href="#" mdbBtn color="primary" class="waves-light" mdbWavesEffect>{{card.buttonText}}</a>
+            </mdb-card-footer>
+        </mdb-card>
+        </div>
+
+    </mdb-carousel-item>
+</mdb-carousel>
 
 <!--Slides-->
 <div class="carousel-inner" role="listbox">

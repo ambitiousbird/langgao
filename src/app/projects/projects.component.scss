@@ -1,0 +1,5 @@
+.carousel-item {
+    &.active, &.carousel-item-right, &.carousel-item-next {
+      display: flex !important;
+    }
+  }

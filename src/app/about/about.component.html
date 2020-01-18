@@ -1,6 +1,6 @@
 <mdb-carousel class="carousel slide carousel-fade" [animation]="'fade'">
     <mdb-carousel-item>
-      <div class="view w-100">
+      <div class="view">
         <img class="d-block w-100" src="../../assets/img/background/code.jpg" alt="First slide">
         <div class="mask rgba-black-strong waves-light" mdbWavesEffect></div>
       </div>
@@ -12,14 +12,16 @@
             <li>Application deployment on Amazon Web Services and Heroku</li>
             <li>Algorithm design for optimum performance</li>
         </ul>
-        <a href="/projects#web" class="btn btn-outline-white fadeInLeft">View Demos</a>
+        <a mdbBtn color="secondary" mdbWavesEffect href="/projects#web">
+            <mdb-icon fas icon="clone" class="left"></mdb-icon>View projects
+          </a>
             <!-- A strong sense of ownership and responsibility for code quality that follows best practices
             A strong passion for learning and adapting to new technologies
             Ability to think critically and independent. -->
       </div>
     </mdb-carousel-item>
     <mdb-carousel-item>
-      <div class="view w-100">
+      <div class="view">
         <img class="d-block w-100" src="../../assets/img/background/laptop.jpg" alt="Second slide">
         <div class="mask rgba-black-slight waves-light" mdbWavesEffect></div>
       </div>
@@ -30,11 +32,13 @@
             <li>Database structure design</li> 
             <li>Integrating RESTful service architectures, and Web architecture components</li>
         </ul>
-        <a href="/projects#mobile" class="btn btn-outline-white fadeInLeft">View Demos</a>
+        <a mdbBtn color="success" mdbWavesEffect href="/projects#mobile">
+          <mdb-icon fas icon="clone" class="left"></mdb-icon>View projects
+        </a>
       </div>
     </mdb-carousel-item>
     <mdb-carousel-item>
-      <div class="view w-100">
+      <div class="view">
         <img class="d-block w-100" src="../../assets/img/background/computer-1245714.jpg" alt="Third slide">
         <div class="mask rgba-black-slight waves-light" mdbWavesEffect></div>
       </div>
@@ -45,7 +49,9 @@
             <li>Data mining and analysis</li>
             <li>Deep, feed-forward artificial neural network</li>
         </ul>
-        <a href="projects#machine-learning" class="btn btn-outline-white fadeInLeft">View Projects</a>
+        <a mdbBtn color="pink" mdbWavesEffect href="projects#machine-learning">
+          <mdb-icon fas icon="clone" class="left"></mdb-icon>View projects
+        </a>
       </div>
     </mdb-carousel-item>
   </mdb-carousel>

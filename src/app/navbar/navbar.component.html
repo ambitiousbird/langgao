@@ -7,14 +7,15 @@
                     <a class="nav-link js-scroll-trigger" href="#about-me">About me</a>
                 </li>
 
-                <li class="nav-item dropdown">
-                    <a href="/projects" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" aria-haspopup="true" aria-expanded="false">Projects</a>
+                <li class="nav-item dropdown" dropdown>
+                    <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
+                        Projects<span class="caret"></span></a>
                     <!--onhover-->
-                    <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="#web">Web Development</a>
-                        <a class="dropdown-item" href="#mobile">Mobile Development</a>
-                        <a class="dropdown-item" href="#machine-learning">Machine Learning and Big Data</a>
-                        <a class="dropdown-item" href="#wearable-systems">Wearable Systems</a>
+                    <div *dropdownMenu class="dropdown dropdown-menu dropdown-primary" role="menu">
+                        <a class="dropdown-item waves-light" href="/projects#web">Web Development</a>
+                        <a class="dropdown-item waves-light" href="/projects#mobile">Mobile Development</a>
+                        <a class="dropdown-item waves-light" href="/projects#machine-learning">Machine Learning and Big Data</a>
+                        <a class="dropdown-item waves-light" href="/projects#wearable-systems">Wearable Systems</a>
                     </div>
                 </li>
                 <li class="nav-item">
