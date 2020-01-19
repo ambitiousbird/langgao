@@ -1,4 +1,3 @@
-<!--Carousel Wrapper-->
 <mdb-carousel [isControls]="true" class="carousel slide" [animation]="'slide'">
     <!--First slide-->
     <mdb-carousel-item>
@@ -21,6 +20,7 @@
         <!--Caption-->
     </mdb-carousel-item>
     <!--/First slide-->
+
     <!--Second slide-->
     <mdb-carousel-item>
         <!--Mask color-->
@@ -64,419 +64,99 @@
     </mdb-carousel-item>
     <!--/Third slide-->
 </mdb-carousel>
-<!--Carousel Wrapper-->
 
 <section id="web" class="text-center my-5">
+    <h2 class="h1-responsive font-weight-bold my-5">Web Development Demos</h2>
+    <p class="grey-text w-responsive mx-auto mb-5">Full stack web development with React, Nodejs, Express, MongoDB, and more</p>
+    <mdb-carousel [isControls]="true" class="carousel-multi-item multi-animation" [type]="'carousel-multi-item'" [animation]="'slide'">
+        <mdb-carousel-item *ngFor="let item of slides; let i = index">
+            <div class="col-md-6 pb-2" [ngClass]="{'d-none d-md-block': cardIndex !== 0}" *ngFor="let card of item; let cardIndex = index">
+                <mdb-card  cascade="true">
+                    <div>
+                        <div class="view view-cascade overlay waves-light" mdbWavesEffect>
 
-        <h2 class="h1-responsive font-weight-bold my-5">Web Development Demos</h2>
-        <p class="grey-text w-responsive mx-auto mb-5">Full stack web development with React, Nodejs, Express, MongoDB, and more</p>
-
-        <!--Carousel Wrapper-->
-        <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
-
-  <!--Controls-->
-  <div class="controls-top">
-    <a class="btn-floating" href="#multi-item-example" data-slide="prev">
-        <p class="inline direction">Prev</p>
-        <div class="inline">
-            <div class="arrow">
-                <i class="fa fa-chevron-left"></i>
-            </div>
-        </div>
-    </a>
-    <a class="btn-floating" href="#multi-item-example" data-slide="next">
-        <div class="inline">
-            <div class="arrow">
-                <i class="fa fa-chevron-right"></i>
-            </div>
-        </div>
-        <p class="inline direction">Next</p>
-    </a>
-  </div>
-  <!--/.Controls-->
-
-  <!--Indicators-->
-  <ol class="carousel-indicators">
-    <li data-target="#multi-item-example" data-slide-to="0" class="active indicator"></li>
-    <li data-target="#multi-item-example" data-slide-to="1" class="indicator"></li>
-    <li data-target="#multi-item-example" data-slide-to="2" class="indicator"></li>
-  </ol>
-  <!--/.Indicators-->
-
-  <mdb-carousel [isControls]="true" class="carousel-multi-item multi-animation" [type]="'carousel-multi-item'" [animation]="'slide'">
-    <mdb-carousel-item *ngFor="let item of slides; let i = index">
-
-        <div class="col-md-4 pb-2" [ngClass]="{'d-none d-md-block': cardIndex !== 0}" *ngFor="let card of item; let cardIndex = index">
-        <mdb-card class="my-1 h-100">
-            <mdb-card-img [src]="card.img" alt="Card image cap"></mdb-card-img>
-            <mdb-card-body>
-            <mdb-card-title>
-                <h4>{{card.title}}</h4>
-            </mdb-card-title>
-            <p>{{card.description}}</p>
-            </mdb-card-body>
-            <mdb-card-footer>
-            <a href="#" mdbBtn color="primary" class="waves-light" mdbWavesEffect>{{card.buttonText}}</a>
-            </mdb-card-footer>
-        </mdb-card>
-        </div>
-
-    </mdb-carousel-item>
-</mdb-carousel>
-
-<!--Slides-->
-<div class="carousel-inner" role="listbox">
-
-    <!--First slide-->
-    <div class="carousel-item active" style="background:rgba(230, 227, 225, 0.548)">
-        <div class="row project-slide" style="margin-bottom: 40px;">
-            <div class="col-lg-6 mb-lg-0 mb-5 mt-4">
-                <div class="view overlay rounded ecomerce-1" style="width:85%; min-height: 400px; float:right">
-                    <video class="img-fluid" alt="Sample project image" autoplay loop>
-                        <source src="./../../assets/img/projects/stonie.mp4" type="video/mp4"></video>
-                    <a href="https://stonie.herokuapp.com" target="_blank">
-                        <div class="mask rgba-white-slight"></div>
-                    </a>
-                </div>
-
-            </div>
-
-            <div class="col-lg-6">
-                <div class="row mb-3  mt-5 ml-3">
-                    <div class="col-md-11 col-10">
-                        <div>
-                            <i class="fa fa-shopping-cart fa-4x cyan-text" style="display:inline-block"></i>
-                            <h5 class="font-weight-bold mb-3" style="display:inline-block">&nbsp; &nbsp;STONIE <span
-                                    style="font-weight:600">&mdash; An E-commerce Website for stones</span></h5>
+                            <!--Video source-->
+                            <video class="video-fluid" autoplay loop>
+                                <source src={{card.source}} type="video/mp4" />
+                            </video>
+                            <a href={{card.link}} target="_blank">
+                                <div class="mask rgba-white-slight"></div>
+                            </a>
                         </div>
 
-                        <p class="grey-text">Tech Stack: Nodejs + Express + MongoDB + Handlebars</p>
-                        <br>
-                        <div class="accomplishments" id="stonie">
-                            <ul>
-                                <li>Utilized <strong>CSRF</strong> for online session security and <strong>Passport</strong>
-                                    middleware for unobtrusive authentication</li>
-                                <br>
-                                <li>Implemented payment system with <strong>stripe API</strong></li>
-                                <br>
-                                <li>Managed user and product data with <strong>MongoDB</strong></li>
+                        <mdb-card-body>
+                            <!-- <p innerHTML={{card.description}}>{{card.description}}</p>  -->
+                            <a href="" [ngClass]="card.icon_color">
+                                <h5 class="font-weight-bold mt-2 mb-3"><i class="fa pr-2" [ngClass]="card.icon"></i>{{card.category}}</h5>
+                            </a>
+                            <h4 class="font-weight-bold mb-3">{{card.title}}</h4>
+                            <p class="grey-text">Tech Stack: {{card.tech_stack}}</p>
+                            <h4 class="pt-2 pb-2">{{card.intro}}</h4>
+                            <ul class="accomplishments" style="text-align:left">
+                                <li innerHTML={{features.feature}} *ngFor="let features of card.description">{{features.feature}}</li>
                             </ul>
+                        </mdb-card-body>
+
+                        <div class="view view-cascade overlay waves-light" mdbWavesEffect>
+                            <a class="btn btn-success btn-rounded btn-md waves-light" href= {{card.preview_link}}
+                            target="_blank">{{card.try}}</a>
+                            <a class="btn btn-primary btn-rounded btn-md" href= {{card.source_link}}
+                            target="_blank">{{card.view}}</a>
                         </div>
-                        <a class="btn btn-info btn-rounded btn-md" href="https://stonie.herokuapp.com" target="_blank">Online
-                            preview</a>
-                        <a class="btn btn-primary btn-rounded btn-md" href="https://github.com/ambitiousbird/stonie"
-                            target="_blank">View source code</a>
+
                     </div>
-                </div>
+                </mdb-card>
             </div>
+        </mdb-carousel-item>
+    </mdb-carousel>
+</section>
+
+
+<section id="mobile" class="my-5" style="height:auto; ">
+    <h2 class="h1-responsive font-weight-bold text-center my-5">Mobile App Demos</h2>
+    <p class="grey-text text-center w-responsive mx-auto mb-5">Stay tuned for more Apps!</p>
+    <div class="row" id = "lemonmusic">
+        <div class="col-lg-5 mb-lg-0 mb-5">
+            <!--Image-->
+            <div class="ml-5 pl-2">
+                <img src="./../../assets/img/projects/Lemon Music.gif" alt="Sample project image" class="img-fluid rounded z-depth-1" style="width:60%;opacity:1">
+            </div>
+
         </div>
-
-
-        <div class="row" id ="sharemeshi" style="margin-bottom: 100px">
-            <div class="col-lg-6">
-                <div class="row mb-3  mt-5 ml-5">
-                    <div class="col-md-11 col-10">
-                        <div>
-                            <i class="fa fa-shopping-cart fa-4x orange-text" style="display:inline-block"></i>
-                            <h5 class="font-weight-bold mb-3" style="display:inline-block">&nbsp; &nbsp;sharemeshi      <span style="font-weight:600">&mdash;A food sharing platform</span>
-                            </h5>
-                        </div>
-                        <p class="grey-text">Tech Stack: AngularJS + Express + MongoDB + Node.js</p>
-                        <br>
-                        <div class="accomplishments" id="sharemeshi">
-                            <ul style="text-align:left; margin-left:30px">
-                                <li>Implemented user authentication with firebase</li>
-                                <br>
-                                <li>Integrated <strong>Paypal API</strong> for payment system</li>
-                                <br>
-                                <li>Managed user and product data with <strong>MongoDB</strong></li>
-                            </ul>
-                        </div>
-                        <a class="btn btn-info btn-rounded btn-md" href="https://sharemeshi.com" target="_blank">Online
-                            preview</a>
-                        <a class="btn btn-primary btn-rounded btn-md" href="https://github.com/ambitiousbird/sharemeshi"
-                            target="_blank">View source code</a>
-                    </div>
+        <div class="col-lg-7">
+            <!-- Grid row -->
+            <div class="row mb-3  mt-5">
+                <div class="col-md-1 col-2">
+                    <i class="fa fa-music fa-2x cyan-text"></i>
                 </div>
-            </div>
-
-            <div class="col-lg-6 mb-lg-0 mb-5">
-
-                <div class="view overlay rounded ecomerce-2" style="width:85%; min-height: 400px; float:right">
-                    <video class="img-fluid" alt="Sample project image" autoplay loop>
-                        <source src="./../../assets/img/projects/sharemeshi.mp4" type="video/mp4"></video>
-                    <a href="https://sharemeshi.com" target="_blank">
-                        <div class="mask rgba-white-slight"></div>
-                    </a>
+                <div class="col-md-11 col-10">
+                    <h5 class="font-weight-bold mb-3">Lemon Music</h5>
+                    <p class="grey-text">A music web app built with React + React-Router + Redux + ES6 + Webpack</p>
+                    <br>
+                    <div style="display:table-cell; vertical-align:middle; top: 50%">
+                        <ul class="accomplishments">
+                            <li>Implemented routing with <strong>React-router</strong> and used <strong>webpack</strong> for dependency graph building and
+                                bundle generation</li>
+                            <li>Configured Stylus as <strong></strong>CSS preprocessor </li>
+                            <li>Managed the states and properties of songs using <strong>Redux</strong> with actions, reducers, and store
+                                </li>
+                            <li>Made animations for music player component with <strong>react-transition-group</strong></li>
+                            <li>Used <strong>JSONP</strong> to fetch data from QQ Music <strong>API</strong> and <strong>React-lazyload</strong> to optimize image loading</li>
+                        </ul>
+                    </div>
+                    <a class="btn btn-info btn-rounded btn-md" href="https://ambitiousbird.github.io/Lemon-Music/" target="_blank">Online preview</a>
+                    <a class="btn btn-primary btn-rounded btn-md" href="https://github.com/ambitiousbird/Lemon-Music" target="_blank">View source code</a>
+                </div>
+                <div class="info">
+                    <p><strong>Note</strong> <br>
+                        If you are accessing the online preview site from a laptop, it is recommended that you resize the brower to mimic a phone screen for best experience 
+                    </p>
                 </div>
             </div>
         </div>
     </div>
-    <!--/.First slide-->
-
-    <!--Second slide-->
-    <div class="carousel-item" style="background:rgb(221, 221, 218)">
-
-
-        <div class="row d-flex justify-content-center" >
-
-            <div class="col-md-6 col-xl-5 mb-4  mt-4 table-cell" id = "demographics">
-                <div class="view overlay rounded z-depth-2">
-                    <video class="img-fluid" alt="Sample project image" autoplay loop>
-                        <source src="./../../assets/img/projects/demographics.mp4" type="video/mp4"></video>
-                    <a href="https://smart-demographics.herokuapp.com/" target="_blank">
-                        <div class="mask rgba-white-slight"></div>
-                    </a>
-                </div>
-
-                <div class="card-body">
-                    <a href="" class="blue-text">
-                        <h5 class="font-weight-bold mt-2 mb-3">
-                            <i class="fa fa fa-wrench pr-2"></i>Tools</h5>
-                    </a>
-                    <h4 class="font-weight-bold mb-3">Demographics Analysis</h4>
-                    <p class="grey-text">Tech Stack: React + Node.js + Express + Redux + React Router + Webpack</p>
-                    <h4 class="pt-2 pb-2">Enter image link and get a brief demographics analysis report!</h4>
-
-                    <ul class="accomplishments" style="text-align:left">
-                        <li>Developed the <strong>ES6</strong> based frontend with <strong>React Router</strong>,
-                            <strong>Redux</strong>, and <strong>Clarifai API</strong></li>
-                        <li>Implemented backend with <strong>Node.js</strong>, <strong>Express.js</strong>, and <strong>PostgreSQL</strong>;
-                            Used <strong>REST</strong> to leverage the HTTP protocol</li>
-                        <li>Performed real-time end-to-end integration with Apache Kafka in Apache Spark’s Structured
-                            Streaming</li>
-                    </ul>
-
-                    <a class="btn btn-success btn-rounded btn-md" href="https://smart-demographics.herokuapp.com/"
-                        target="_blank">Try it out</a>
-                    <a class="btn btn-primary btn-rounded btn-md" href="https://github.com/ambitiousbird/ML-demographics"
-                        target="_blank">View source code</a>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-xl-5 mb-4  mt-4 table-cell" id = "robofactory">
-                <div class="view overlay rounded z-depth-2">
-                    <video class="img-fluid" alt="Sample project image" autoplay loop>
-                        <source src="./../../assets/img/projects/robofactory.mp4" type="video/mp4"></video>
-                    <a href="https://ambitiousbird.github.io/robofactory/" target="_blank">
-                        <div class="mask rgba-white-slight"></div>
-                    </a>
-                </div>
-                <div class="card-body">
-                    <a href="" class="green-text">
-                        <h5 class="font-weight-bold mt-2 mb-3">
-                            <i class="fa fa-gamepad pr-2"></i>Entertainment</h5>
-                    </a>
-                    <h4 class="font-weight-bold mb-3">Robot Factory</h4>
-                    <p class="grey-text">Tech Stack: React + ES6 + Redux</p>
-                    <h4 class="pt-2 pb-2">Search for your favorite robots!</h4>
-
-                    <ul class="accomplishments" style="text-align:left; line-height:240%">
-                        <li>Created responsive, resuable react components</li>
-                        <li>Added a search function that quickly renders the search results</li>
-                        <li>Managed states with <strong>Redux</strong></li>
-                    </ul>
-
-                    <a class="btn btn-success btn-rounded btn-md" href="https://ambitiousbird.github.io/robofactory/"
-                        target="_blank">Try it out</a>
-                    <a class="btn btn-primary btn-rounded btn-md" href="https://github.com/ambitiousbird/robofactory"
-                        target="_blank">View source code</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--/.Second slide-->
-
-    <!--Third slide-->
-    <div class="carousel-item" style="background:rgb(221, 221, 218)">
-
-
-        <div class="row d-flex justify-content-center">
-
-            <div class="col-md-6 col-xl-5 mb-4  mt-4 table-cell" id = "cryptodash">
-                <div class="view overlay rounded z-depth-2">
-                    <video class="img-fluid" alt="Sample project image" autoplay loop>
-                        <source src="./../../assets/img/projects/crypto.mp4" type="video/mp4"></video>
-                    <a href="http://cryptocurrency-dash.s3-website.us-east-2.amazonaws.com/" target="_blank">
-                        <div class="mask rgba-white-slight"></div>
-                    </a>
-                </div>
-                <div class="card-body">
-                    <a href="" class="blue-text">
-                        <h5 class="font-weight-bold mt-2 mb-3">
-                            <i class="fa fa fa-bitcoin pr-2"></i>Bitcoin</h5>
-                    </a>
-                    <h4 class="font-weight-bold mb-3">Crypto Dash</h4>
-                    <p class="grey-text">Tech Stack: React + Highcharts + Cryptocompare</p>
-                    <h4 class="pt-2 pb-2">Check your favorite bitcoin prices!</h4>
-
-                    <ul class="accomplishments" style="text-align:left;height:120px;">
-                        <li>Designed UI with styled-components</li>
-                        <li>Utilized <Strong>Cryptocompare API</Strong> to get crypto coin prices and list and <Strong>moment</Strong> to validate and manipulate date</li>
-                        <li>Visualized crypto data with <Strong>Highcharts</Strong></li>
-                    </ul>
-
-                    <a class="btn btn-success btn-rounded btn-md" href="http://cryptocurrency-dash.s3-website.us-east-2.amazonaws.com/"
-                        target="_blank">Try it out</a>
-                    <a class="btn btn-primary btn-rounded btn-md" href="https://github.com/ambitiousbird/cryptodash"
-                        target="_blank">View source code</a>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-xl-5 mb-4  mt-4 table-cell" id = "userdash">
-                <div class="view overlay rounded z-depth-2">
-                    <video class="img-fluid" alt="Sample project image" autoplay loop>
-                        <source src="./../../assets/img/projects/userdash.mp4" type="video/mp4"></video>
-                    <a href="https://user-dash.firebaseapp.com/" target="_blank">
-                        <div class="mask rgba-white-slight"></div>
-                    </a>
-                </div>
-                <div class="card-body">
-                    <a href="" class="green-text">
-                        <h5 class="font-weight-bold mt-2 mb-3">
-                            <i class="fa fa-table pr-2"></i>Data processing</h5>
-                    </a>
-                    <h4 class="font-weight-bold mb-3">User Dash</h4>
-                    <p class="grey-text">Tech Stack: AngularJS + Node.js + MongoDB + Highcharts + Firebase + Heroku</p>
-                    <h4 class="pt-2 pb-2">Random data visualization</h4>
-
-                    <ul class="accomplishments" style="text-align:left; height:120px;">
-                        <li>Visualized random user data in <strong>Highcharts</strong></li>
-                        <li>Implemented data manipulation functionalities with <strong>Node.js</strong> and         <Strong>MongoDB</Strong></li>
-                    </ul>
-
-                    <a class="btn btn-success btn-rounded btn-md" href="https://user-dash.firebaseapp.com/"
-                        target="_blank">Try it out</a>
-                    <a class="btn btn-primary btn-rounded btn-md" href="https://github.com/ambitiousbird/User-dash"
-                        target="_blank">View source code</a>
-                </div>
-            </div>
-        </div>
-
-    </div>
-    <!--/.Third slide-->
-
-    <!--Fourth slide-->
-    <div class="carousel-item" style="background:rgb(221, 221, 218)">
-        <div class="row d-flex justify-content-center">
-            <div class="col-md-6 col-xl-5 mb-4  mt-4 table-cell" id = "cryptodash">
-                <div class="view overlay rounded z-depth-2">
-                    <img class="img-fluid" src="./../../assets/img/projects/hibersense.png" alt="hibersense" >
-                    <a href="http://hibersense-dashboard.s3-website.us-east-2.amazonaws.com/" target="_blank">
-                        <div class="mask rgba-white-slight"></div>
-                    </a>
-                </div>
-                <div class="card-body">
-                    <a href="" class="blue-text">
-                        <h5 class="font-weight-bold mt-2 mb-3">
-                            <i class="fa fa-pie-chart"></i> Data Visualization
-                        </h5>
-                    </a>
-                    <h4 class="font-weight-bold mb-3">HiberSense</h4>
-                    <p class="grey-text">Tech Stack: React + D3 + Redux + React Router</p><br>
-                    <h4 class="pt-2 pb-2">Monitor and control room temperatures in real time</h4>
-
-                    <ul class="accomplishments" style="text-align:left;height:120px;">
-                        <li>Utilized Redux extensively for state management</li>
-                        <li>Computed and synchronized energy and temperature usage data between multiple graphs </li>
-                        <li>Visualized temperature and energy data with <Strong>D3</Strong></li>
-                        <li>Hosted the application on <strong>AWS S3</strong></li>
-                    </ul>
-
-                    <a class="btn btn-success btn-rounded btn-md" href="http://hibersense-dashboard.s3-website.us-east-2.amazonaws.com/"
-                        target="_blank">Try it out</a>
-                    <a class="btn btn-primary btn-rounded btn-md" href="https://github.com/ambitiousbird/hibersense-dash"
-                        target="_blank">View source code</a>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-xl-5 mb-4  mt-4 table-cell" id = "userdash">
-                <div class="view overlay rounded z-depth-2">
-                    <img class="img-fluid" src="../../assets/img/projects/social-detector.png" alt="social detector">
-                        <a href="http://socialdetection.s3-website.us-east-2.amazonaws.com/" target="_blank">
-                            <div class="mask rgba-white-slight"></div>
-                        </a>
-                </div>
-                <div class="card-body">
-                    <a href="" class="green-text">
-                        <h5 class="font-weight-bold mt-2 mb-3">
-                            <i class="fa fa-search pr-2"></i>Data Scrapping</h5>
-                    </a>
-                    <h4 class="font-weight-bold mb-3">Social Detector</h4>
-                    <p class="grey-text">Tech Stack: React + Redux + Node.js + Express + MongoDB + JWT + Passport + Python + BeautifulSoup</p>
-                    <h4 class="pt-2 pb-2">Detect online social traces </h4>
-
-                    <ul class="accomplishments" style="text-align:left; height:120px;">
-                        <li>Implemented google scrawler with <strong>Python</strong> and <strong>BeautifulSoup</strong></li>
-                        <li>Added user authentication with <strong>Node.js</strong>,<strong>Passport</strong>,<strong>JWT</strong> and <Strong>MongoDB</Strong></li>
-                        <li>Deployed the application with <strong>AWS EC2</strong> and <strong>S3</strong></li>
-                    </ul>
-
-                    <a class="btn btn-success btn-rounded btn-md" href="http://socialdetection.s3-website.us-east-2.amazonaws.com/"
-                        target="_blank">Try it out</a>
-                    <a class="btn btn-primary btn-rounded btn-md" href="https://github.com/ambitiousbird/social-detection"
-                        target="_blank">View source code</a>
-                </div>
-            </div>
-        </div>
-
-    </div>
-    <!--/.Fourth slide-->
-
-</div>
-<!--/.Slides-->
-
-</div>
-<!--/.Carousel Wrapper-->
-
-    </section>
-
-
-    <section id="mobile" class="my-5" style="height:auto; ">
-        <h2 class="h1-responsive font-weight-bold text-center my-5">Mobile App Demos</h2>
-        <p class="grey-text text-center w-responsive mx-auto mb-5">Stay tuned for more Apps!</p>
-        <div class="row" id = "lemonmusic">
-            <div class="col-lg-5 mb-lg-0 mb-5">
-                <!--Image-->
-                <div class="ml-5 pl-2">
-                    <img src="./../../assets/img/projects/Lemon Music.gif" alt="Sample project image" class="img-fluid rounded z-depth-1" style="width:60%;opacity:1">
-                </div>
-
-            </div>
-            <div class="col-lg-7">
-                <!-- Grid row -->
-                <div class="row mb-3  mt-5">
-                    <div class="col-md-1 col-2">
-                        <i class="fa fa-music fa-2x cyan-text"></i>
-                    </div>
-                    <div class="col-md-11 col-10">
-                        <h5 class="font-weight-bold mb-3">Lemon Music</h5>
-                        <p class="grey-text">A music web app built with React + React-Router + Redux + ES6 + Webpack</p>
-                        <br>
-                        <div style="display:table-cell; vertical-align:middle; top: 50%">
-                            <ul class="accomplishments">
-                                <li>Implemented routing with <strong>React-router</strong> and used <strong>webpack</strong> for dependency graph building and
-                                    bundle generation</li>
-                                <li>Configured Stylus as <strong></strong>CSS preprocessor </li>
-                                <li>Managed the states and properties of songs using <strong>Redux</strong> with actions, reducers, and store
-                                    </li>
-                                <li>Made animations for music player component with <strong>react-transition-group</strong></li>
-                                <li>Used <strong>JSONP</strong> to fetch data from QQ Music <strong>API</strong> and <strong>React-lazyload</strong> to optimize image loading</li>
-                            </ul>
-                        </div>
-                        <a class="btn btn-info btn-rounded btn-md" href="https://ambitiousbird.github.io/Lemon-Music/" target="_blank">Online preview</a>
-                        <a class="btn btn-primary btn-rounded btn-md" href="https://github.com/ambitiousbird/Lemon-Music" target="_blank">View source code</a>
-                    </div>
-                    <div class="info">
-                        <p><strong>Note</strong> <br>
-                            If you are accessing the online preview site from a laptop,it is recommended that you resize the brower to mimic a phone screen for best experience 
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <hr class="my-5">
-    </section>
+    <hr class="my-5">
+</section>
 
     <section id="wearable-systems" class="text-center my-5" style="height:auto">
         <h2 class="h1-responsive font-weight-bold my-5">Smart Wearable Systems</h2>
@@ -594,5 +274,5 @@
                 </a>
             </div>
         </div>
-        <hr class="my-5">
+
     </section>
