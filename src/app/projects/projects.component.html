@@ -76,9 +76,10 @@
                         <div class="view view-cascade overlay waves-light" mdbWavesEffect>
 
                             <!--Video source-->
-                            <video class="video-fluid" autoplay loop>
+                            <video class="video-fluid" autoplay loop *ngIf="!card.source_is_image">
                                 <source src={{card.source}} type="video/mp4" />
                             </video>
+                            <img *ngIf="card.source_is_image" class="video-fluid" src={{card.source}} alt={{card.title}}>
                             <a href={{card.link}} target="_blank">
                                 <div class="mask rgba-white-slight"></div>
                             </a>
@@ -92,7 +93,7 @@
                             <h4 class="font-weight-bold mb-3">{{card.title}}</h4>
                             <p class="grey-text">Tech Stack: {{card.tech_stack}}</p>
                             <h4 class="pt-2 pb-2">{{card.intro}}</h4>
-                            <ul class="accomplishments" style="text-align:left">
+                            <ul class="accomplishments">
                                 <li innerHTML={{features.feature}} *ngFor="let features of card.description">{{features.feature}}</li>
                             </ul>
                         </mdb-card-body>
@@ -113,6 +114,7 @@
 
 
 <section id="mobile" class="my-5" style="height:auto; ">
+    <hr class="my-5">
     <h2 class="h1-responsive font-weight-bold text-center my-5">Mobile App Demos</h2>
     <p class="grey-text text-center w-responsive mx-auto mb-5">Stay tuned for more Apps!</p>
     <div class="row" id = "lemonmusic">

@@ -122,6 +122,7 @@ export class ProjectsComponent implements OnInit {
     },
     {
       source: '../../assets/img/projects/hibersense.png',
+      source_is_image: true,
       link: 'http://hibersense-dashboard.s3-website.us-east-2.amazonaws.com/',
       icon: 'fa-chart-pie',
       icon_color: 'blue-text',
@@ -141,7 +142,8 @@ export class ProjectsComponent implements OnInit {
       source_link: 'https://github.com/ambitiousbird/hibersense-dash'
     },
     {
-      source: '../../assets/img/projects/social-detector.png',
+      source: '../../assets/img/projects/socialDetector.png',
+      source_is_image: true,
       link: 'http://socialdetection.s3-website.us-east-2.amazonaws.com/',
       icon: 'fa-search',
       icon_color: 'green-text',

@@ -1,16 +1,19 @@
 .carousel-item {
-    &.active, &.carousel-item-right, &.carousel-item-next {
-      display: flex !important;
+  .accomplishments{
+    text-align:left;
+    li{
+      list-style-type: circle;
     }
   }
+}
 
-  .row{
-    margin:auto 0;
-  }
+.row{
+  margin:auto 0;
+}
 
-  .info{
-    margin-top:25px;
-    background-color: #e7f3fe;
-    border-left: 6px solid #2196F3;
-  }
+.info{
+  margin-top:25px;
+  background-color: #e7f3fe;
+  border-left: 6px solid #2196F3;
+}
 
