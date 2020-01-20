@@ -1,41 +1,58 @@
-.capability{
-    list-style-type: none;
-    text-align: left;
-}
+@import url('https://fonts.googleapis.com/css?family=Lora&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Quicksand:300&display=swap');
 
 .carousel-caption{
-    font-size: 2em;
-    // display: table-cell;
-    // vertical-align: middle;
+    font-size: 1.85em;
     padding: 50% 0;
     height: 350px;
-}
-
-.btn{
-    font-size: 1.5rem;
-    color:rgb(223, 224, 199);
-    &:hover{
-        color: rgb(202, 174, 15);
+    .capability{
+        list-style-type: square;
+        text-align: left;
+        font-family: 'Lora', serif;
     }
-} 
-
-.btn-outline-white{
-    border: solid white 2px;
-    &:hover{
-        border: solid rgb(202, 174, 15) 2px;
+    .btn{
+        font-size: 1.2rem;
+        color:rgb(223, 224, 199);
+        &:hover{
+            color: rgb(202, 174, 15);
+        }
+    } 
+    
+    .btn-outline-white{
+        border: solid white 2px;
+        &:hover{
+            border: solid rgb(202, 174, 15) 2px;
+        }
     }
-}
-
-#about-me{
-    width: 75%;
-    margin:auto;
-    h1{
-        font-family: 'Raleway', sans-serif;
-        align-content: justify;
-    }
-    h5{
-        font-size: 1.5em;
-        font-family: 'Raleway', sans-serif;
-        align-content: justify;
+    @media only screen and (max-width:800px){
+        
     }
 }
+
+.profile-container{
+    min-height: 100vh;
+    margin: 40px 0;
+    .profile{
+        width:40%;
+        margin: 40px 0;
+    }
+    
+    #about-me{
+        width: 75%;
+        margin:auto;
+        h1{
+            font-family: 'Raleway', sans-serif;
+            align-content: justify;
+        }
+        h5{
+            font-size: 1.5em;
+            font-family: 'Quicksand', sans-serif;
+            align-content: justify;
+        }
+    }
+}
+
+.carousel-indicator{
+    border: solid red 8px;
+}
+
