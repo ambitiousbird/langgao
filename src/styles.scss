@@ -4,9 +4,15 @@
         margin-top:0;
     }
     .carousel-indicators{
-        border:solid red 6px;
-        
+        margin-bottom:200px;
+        @media only screen and (max-width:960px){
+            margin-bottom:100px;
+        }
+        @media only screen and (max-width:960px){
+            margin-bottom:100px;
+        }
     }
+
 }
 
 

@@ -4,7 +4,18 @@
 .carousel-caption{
     font-size: 1.85em;
     padding: 50% 0;
+
     height: 350px;
+    .h3-responsive{
+        @media only screen and (max-width: 583px){
+            padding:0;
+            margin-top: 100px;
+            position: relative;
+        }
+        @media only screen and (max-width: 408px){
+            margin-top: 130px;
+        }
+    }
     .capability{
         list-style-type: square;
         text-align: left;
@@ -16,6 +27,11 @@
         &:hover{
             color: rgb(202, 174, 15);
         }
+        @media only screen and (max-width: 860px){
+            // display:none;
+            margin-top: 15px;
+            font-size: small;
+        }
     } 
     
     .btn-outline-white{
@@ -24,8 +40,14 @@
             border: solid rgb(202, 174, 15) 2px;
         }
     }
-    @media only screen and (max-width:800px){
-        
+    @media only screen and (max-width:1336px){
+        font-size: 1.2em;
+    }
+    @media only screen and (max-width:960px){
+        font-size: 0.8 em;
+    }
+    @media only screen and (max-width:408px){
+        font-size: x-small;
     }
 }
 
@@ -51,8 +73,3 @@
         }
     }
 }
-
-.carousel-indicator{
-    border: solid red 8px;
-}
-
