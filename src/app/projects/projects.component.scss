@@ -1,19 +1,82 @@
-.carousel-item {
-  .accomplishments{
-    text-align:left;
-    li{
-      list-style-type: circle;
+@import url('https://fonts.googleapis.com/css?family=Lora&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Quicksand:300&display=swap');
+
+.carousel-caption{
+    font-size: 1.85em;
+    padding: 40% 0;
+    height: 350px;
+    @media only screen and (max-width: 408px){
+      padding:6% 0;
+      margin: -10% auto;
     }
+    .h3-responsive{
+      @media only screen and (max-width: 583px){
+          padding:0;
+          margin-top: 100px;
+          position: relative;
+      }
+  }
+  .capability{
+      list-style-type: square;
+      text-align: left;
+      font-family: 'Lora', serif;
+  }
+  .btn{
+      font-size: 1.2rem;
+      color:rgb(223, 224, 199);
+      &:hover{
+          color: rgb(202, 174, 15);
+      }
+      @media only screen and (max-width: 860px){
+          // display:none;
+          margin-top: 15px;
+          font-size: small;
+      }
+      @media only screen and (max-width: 400px){
+          // display:none;
+          // margin-top: 15px;
+          font-size: xx-small;
+          padding: 7px;
+          margin-top:0;
+          // padding:10%;
+      }
+    } 
+
+
+  .btn-outline-white{
+      border: solid white 2px;
+      &:hover{
+          border: solid rgb(202, 174, 15) 2px;
+      }
+  }
+  @media only screen and (max-width:1336px){
+      font-size: 1.2em;
+  }
+  @media only screen and (max-width:960px){
+      font-size: 0.8 em;
+  }
+  @media only screen and (max-width:408px){
+      font-size: x-small;
   }
 }
 
-.row{
-  margin:auto 0;
+#mobile{
+  .info{
+    border-left: solid rgb(68, 160, 189) 10px;
+    background-color:rgba(124, 168, 155, 0.52);
+    p{
+      padding-left:10px;
+    }
+    margin-top:20px;
+  }
 }
 
-.info{
-  margin-top:25px;
-  background-color: #e7f3fe;
-  border-left: 6px solid #2196F3;
+.accomplishments-container{
+  display:table-cell; 
+  vertical-align:middle; 
+  top: 50%
 }
 
+#lemon-music{
+  display: flex;
+}

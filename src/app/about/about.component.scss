@@ -1,53 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Lora&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Quicksand:300&display=swap');
 
-.carousel-caption{
-    font-size: 1.85em;
-    padding: 50% 0;
+.front-page{
 
-    height: 350px;
-    .h3-responsive{
-        @media only screen and (max-width: 583px){
-            padding:0;
-            margin-top: 100px;
-            position: relative;
-        }
-        @media only screen and (max-width: 408px){
-            margin-top: 130px;
-        }
-    }
-    .capability{
-        list-style-type: square;
-        text-align: left;
-        font-family: 'Lora', serif;
-    }
-    .btn{
-        font-size: 1.2rem;
-        color:rgb(223, 224, 199);
-        &:hover{
-            color: rgb(202, 174, 15);
-        }
-        @media only screen and (max-width: 860px){
-            // display:none;
-            margin-top: 15px;
-            font-size: small;
-        }
-    } 
-    
-    .btn-outline-white{
-        border: solid white 2px;
-        &:hover{
-            border: solid rgb(202, 174, 15) 2px;
-        }
-    }
-    @media only screen and (max-width:1336px){
-        font-size: 1.2em;
-    }
-    @media only screen and (max-width:960px){
-        font-size: 0.8 em;
-    }
-    @media only screen and (max-width:408px){
-        font-size: x-small;
+    img{
+        // max-width:100vh;
+        width:100%;
     }
 }
 
@@ -57,6 +15,10 @@
     .profile{
         width:40%;
         margin: 40px 0;
+        @media only screen and (max-width:500px){
+            width:100%;
+            margin: auto 20px; 
+        }
     }
     
     #about-me{
@@ -70,6 +32,12 @@
             font-size: 1.5em;
             font-family: 'Quicksand', sans-serif;
             align-content: justify;
+        }
+        @media only screen and (max-width: 408px){
+            h5{
+                font-size: 1em;
+                margin-top: 30px;
+            }
         }
     }
 }

@@ -1,68 +1,65 @@
-<mdb-carousel [isControls]="true" class="carousel slide" [animation]="'slide'">
-    <!--First slide-->
+<mdb-carousel class="carousel slide carousel-fade" id="project" [animation]="'fade'" >
     <mdb-carousel-item>
-        <!--Mask color-->
-        <div class="view">
-            <!--Video source-->
-            <video class="video-fluid" autoplay loop>
-                <source src="../../assets/videos/api.mp4" type="video/mp4" />
-            </video>
-            <div class="mask rgba-indigo-light waves-light" mdbWavesEffect></div>
-        </div>
-
-        <!--Caption-->
-        <div class="carousel-caption">
-            <div class="animated fadeInDown">
-                <h3 class="h3-responsive">Light mask</h3>
-                <p>First text</p>
-            </div>
-        </div>
-        <!--Caption-->
+      <div class="view">
+        <video class="video-fluid" autoplay loop disablePictureInPicture>
+            <source src="../../assets/videos/discussion.mp4" type="video/mp4" />
+        </video>
+        <div class="mask rgba-black-strong waves-light" mdbWavesEffect></div>
+      </div>
+      <div class="carousel-caption">
+        <h3 class="h3-responsive">Web Development</h3>
+        <ul class="capability">
+            <li>Design client-side and server-side architecture</li>
+            <li>Development in React, Angular, Node.js,and more </li>
+            <li>Application deployment on AWS and other cloud services</li>
+            <li>Participate in CI/CD development environment using Agile to develop, unit test, and deploy</li>
+        </ul>
+        <a mdbBtn color="secondary" mdbWavesEffect href="/projects#web">
+            <mdb-icon fas icon="clone" class="left"></mdb-icon>View projects
+          </a>
+            <!-- A strong sense of ownership and responsibility for code quality that follows best practices
+            A strong passion for learning and adapting to new technologies
+            Ability to think critically and independent. -->
+      </div>
     </mdb-carousel-item>
-    <!--/First slide-->
-
-    <!--Second slide-->
     <mdb-carousel-item>
-        <!--Mask color-->
-        <div class="view">
-            <!--Video source-->
-            <video class="video-fluid" autoplay loop>
-                <source src="../../assets/videos/coding.mp4" type="video/mp4" />
-            </video>
-            <div class="mask rgba-purple-slight waves-light" mdbWavesEffect></div>
-        </div>
-
-        <!--Caption-->
-        <div class="carousel-caption">
-            <div class="animated fadeInDown">
-                <h3 class="h3-responsive">Super light mask</h3>
-                <p>Secondary text</p>
-            </div>
-        </div>
-        <!--Caption-->
+      <div class="view">
+        <video class="video-fluid" autoplay loop>
+            <source src="../../assets/videos/coding.mp4" type="video/mp4" />
+        </video>
+        <div class="mask rgba-black-slight waves-light" mdbWavesEffect></div>
+      </div>
+      <div class="carousel-caption">
+        <h3 class="h3-responsive">Mobile Development</h3>
+        <ul class="capability">
+            <li>Design, implement and maintain mobile applications using REST web services</li> 
+            <li>Develop and manage well-functioning databases and applications</li>
+            <li>Create use cases and develop functional documentation for projects and system enhancements included detailed training materials</li>
+        </ul>
+        <a mdbBtn color="success" mdbWavesEffect href="/projects#mobile">
+          <mdb-icon fas icon="clone" class="left"></mdb-icon>View projects
+        </a>
+      </div>
     </mdb-carousel-item>
-    <!--/Second slide-->
-    <!--Third slide-->
     <mdb-carousel-item>
-        <!--Mask color-->
-        <div class="view">
-            <!--Video source-->
-            <video class="video-fluid" autoplay loop disablePictureInPicture>
-                <source src="../../assets/videos/discussion.mp4" type="video/mp4" />
-            </video>
-            <div class="mask rgba-black-strong waves-light" mdbWavesEffect></div>
-        </div>
-
-        <!--Caption-->
-        <div class="carousel-caption">
-            <div class="animated fadeInDown">
-                <h3 class="h3-responsive">Strong mask</h3>
-                <p>Third text</p>
-            </div>
-        </div>
-        <!--Caption-->
+      <div class="view">
+        <video class="video-fluid" autoplay loop>
+            <source src="../../assets/videos/api.mp4" type="video/mp4" />
+        </video>
+        <div class="mask rgba-black-strong waves-light" mdbWavesEffect></div>
+      </div>
+      <div class="carousel-caption">
+        <h3 class="h3-responsive">Data analysis</h3>
+        <ul class="capability">
+            <li>Use strong Python coding skills to research, design, develop and expand upon algorithms that will train neural networks to deliver actionable intelligence faster and more effectively</li>
+            <li>Develop deep-learning software prototypes that demonstrate potential usefulness</li>
+            <li>Analyze data from disparate sources including images, video, signals and more</li>
+        </ul>
+        <a mdbBtn color="pink" mdbWavesEffect href="projects#machine-learning">
+          <mdb-icon fas icon="clone" class="left"></mdb-icon>View projects
+        </a>
+      </div>
     </mdb-carousel-item>
-    <!--/Third slide-->
 </mdb-carousel>
 
 <section id="web" class="text-center my-5">
@@ -112,12 +109,11 @@
     </mdb-carousel>
 </section>
 
-
 <section id="mobile" class="my-5" style="height:auto; ">
     <hr class="my-5">
     <h2 class="h1-responsive font-weight-bold text-center my-5">Mobile App Demos</h2>
     <p class="grey-text text-center w-responsive mx-auto mb-5">Stay tuned for more Apps!</p>
-    <div class="row" id = "lemonmusic">
+    <div id = "lemon-music">
         <div class="col-lg-5 mb-lg-0 mb-5">
             <!--Image-->
             <div class="ml-5 pl-2 view">
@@ -128,7 +124,7 @@
         </div>
         <div class="col-lg-7">
             <!-- Grid row -->
-            <div class="row mb-3  mt-5">
+            <div class="mb-3  mt-5">
                 <div class="col-md-1 col-2">
                     <i class="fa fa-music fa-2x cyan-text"></i>
                 </div>
@@ -136,7 +132,7 @@
                     <h5 class="font-weight-bold mb-3">Lemon Music</h5>
                     <p class="grey-text">A music web app built with React + React-Router + Redux + ES6 + Webpack</p>
                     <br>
-                    <div style="display:table-cell; vertical-align:middle; top: 50%">
+                    <div class="accomplishments-container">
                         <ul class="accomplishments">
                             <li>Implemented routing with <strong>React-router</strong> and used <strong>webpack</strong> for dependency graph building and
                                 bundle generation</li>
@@ -161,55 +157,55 @@
     <hr class="my-5">
 </section>
 
-    <section id="wearable-systems" class="text-center my-5" style="height:auto">
-        <h2 class="h1-responsive font-weight-bold my-5">Smart Wearable Systems</h2>
-        <p class="grey-text w-responsive mx-auto mb-5">My past research involves security and medical applications of embedded sensor devices.</p>
-        <div class="row d-flex justify-content-center">
-            
-            <div class="col-md-6 col-xl-5 mb-4 table-cell" id="wearable">
-                <!--Featured image-->
-                <div class="view overlay rounded z-depth-1">
-                    <img src="./../../assets/img/projects/authentication.png" class="img-fluid" alt="Sample project image">
-                    <div class="mask waves-light" mdbWavesEffect></div>
-                </div>
-
-                <div class="card-body pb-0">
-                    <h4 class="font-weight-bold my-3">Multiple device authentication with accelerometer data</h4>
-                    <p class="grey-text text-left">As the volume of many devices becomes smaller and smaller, typing password to authentication device communication
-                        is no longer doable in many cases. While the plausibility of pairing up two devices using accelerometer
-                        data has been explored, little is known about the authentication of multiple devices with acceleration
-                        sensor. In this research we studied various possible algorithms to solve this problem.
-                    </p>
-                    <!-- <a class="btn btn-indigo btn-sm">
-                        <i class="fa fa-clone left"></i> View project</a> -->
-                </div>
+<section id="wearable-systems" class="text-center my-5" style="height:auto">
+    <h2 class="h1-responsive font-weight-bold my-5">Smart Wearable Systems</h2>
+    <p class="grey-text w-responsive mx-auto mb-5">My past research involves security and medical applications of embedded sensor devices.</p>
+    <div class="d-flex justify-content-center">
+        
+        <div class="col-md-6 col-xl-5 mb-4 table-cell" id="wearable">
+            <!--Featured image-->
+            <div class="view overlay rounded z-depth-1">
+                <img src="./../../assets/img/projects/authentication.png" class="img-fluid" alt="Sample project image">
+                <div class="mask waves-light" mdbWavesEffect></div>
             </div>
 
-            <div class="col-md-6 col-xl-5 mb-4 table-cell" id = "mci">
-                <!--Featured image-->
-                <div class="view overlay rounded z-depth-1">
-                    <img src="./../../assets/img/projects/MCI.png" class="img-fluid" alt="Sample project image">
-                    <div class="mask waves-light" mdbWavesEffect></div>
-                </div>
-
-                <div class="card-body pb-0">
-                    <h4 class="font-weight-bold my-3">Motion analysis of Mild Cognitive Impairment (MCI) patients using accelerometer</h4>
-                    <p class="grey-text text-left">MCI is an intermediate stage of brain malfunction between normal aging and more serious dementia, of
-                        which the most common one is Alzheimer’s disease. In our study of MCI patients’ hand movement patterns,
-                        we found more pauses and direction changes compared to normal people. We believe these findings open
-                        up new opportunities for future research on MCI diagnosis.
-                    </p>
-                    <a class="btn btn-primary btn-rounded btn-md" href="./pdf/MCI motion analysis.pdf" target="_blank">View project report</a>
-                </div>
+            <div class="card-body pb-0">
+                <h4 class="font-weight-bold my-3">Multiple device authentication with accelerometer data</h4>
+                <p class="grey-text text-left">As the volume of many devices becomes smaller and smaller, typing password to authentication device communication
+                    is no longer doable in many cases. While the plausibility of pairing up two devices using accelerometer
+                    data has been explored, little is known about the authentication of multiple devices with acceleration
+                    sensor. In this research we studied various possible algorithms to solve this problem.
+                </p>
+                <!-- <a class="btn btn-indigo btn-sm">
+                    <i class="fa fa-clone left"></i> View project</a> -->
             </div>
         </div>
-        <hr class="my-5">
-    </section>
+
+        <div class="col-md-6 col-xl-5 mb-4 table-cell" id = "mci">
+            <!--Featured image-->
+            <div class="view overlay rounded z-depth-1">
+                <img src="./../../assets/img/projects/MCI.png" class="img-fluid" alt="Sample project image">
+                <div class="mask waves-light" mdbWavesEffect></div>
+            </div>
+
+            <div class="card-body pb-0">
+                <h4 class="font-weight-bold my-3">Motion analysis of Mild Cognitive Impairment (MCI) patients using accelerometer</h4>
+                <p class="grey-text text-left">MCI is an intermediate stage of brain malfunction between normal aging and more serious dementia, of
+                    which the most common one is Alzheimer’s disease. In our study of MCI patients’ hand movement patterns,
+                    we found more pauses and direction changes compared to normal people. We believe these findings open
+                    up new opportunities for future research on MCI diagnosis.
+                </p>
+                <a class="btn btn-primary btn-rounded btn-md" href="./pdf/MCI motion analysis.pdf" target="_blank">View project report</a>
+            </div>
+        </div>
+    </div>
+    <hr class="my-5">
+</section>
 
     <section id="machine-learning" class="my-5" style="height:auto">
         <!-- Section heading -->
         <h2 class="h1-responsive font-weight-bold text-center my-4">Machine Learning and Big Data</h2>
-        <div class="row d-flex justify-content-center mb-5">
+        <div class="d-flex justify-content-center mb-5">
                 <div class="col-md-5 mb-4 view overlay rounded z-depth-1 table-cell mr-4">
                     <img src="./../../assets/img/projects/twittermining.png" class="img-fluid" alt="Sample project image">
                     <div class="mask waves-light" mdbWavesEffect></div>
@@ -217,7 +213,7 @@
 
                 <div class="col-md-5 table-cell ml-4" id="election">
                     <!-- Grid row -->
-                    <div class="row mb-3  mt-5">
+                    <div class="mb-3  mt-5">
                         <div class="col-md-11 col-10 text-left">
                             <h5 class="font-weight-bold mb-3">Emotion analysis on text mining for election prediction</h5>
                             <p class="grey-text">In this project, I measured the public opinions on presidential candidates based on eight emotions:
@@ -226,7 +222,7 @@
                                 emotions simply as neutral, negative, and positive, this method provides more details and perspectives
                                 for emotion analysis.</p>
                             <br>
-                            <div style="display:table-cell; vertical-align:middle; top: 50%">
+                            <div class="accomplishments-container">
                                 <ul>
                                     <li>Collected and analyzed 1.25M tweets using Python and Twitter API</li>
                                     <li>Performed sentiment analysis using the open source dictionary SentiWordNet</li>
@@ -239,10 +235,10 @@
 
         </div>
 
-        <div class="row d-flex justify-content-center mt-4">
+        <div class="d-flex justify-content-center mt-4">
             <div class="col-md-5 table-cell ml-4" id = "reasoning">
                 <!-- Grid row -->
-                <div class="row mb-3  mt-5">
+                <div class="mb-3  mt-5">
                     <div class="col-md-11 col-10 text-left">
                         <h5 class="font-weight-bold mb-3">Towards Learning based Reasoning Systems</h5>
                         <p class="grey-text">In this project, we investigated several learning based reasoning methods. First, we explored the
@@ -253,7 +249,7 @@
                             of unconscious reasoning. Lastly, we explored research progress on emotion and creativity.
                         </p>
                         <br>
-                        <div style="display:table-cell; vertical-align:middle; top: 50%">
+                        <div class="accomplishments-container">
                             <ul>
                                 <li>Used decicion tree on classification of Iris flower using the Iris Plants database</li>
                                 <li>Applied Deep Neural Network on the MNIST dataset, CIFAR dataset and PASCAL VOC 2007 dataset.</li>
