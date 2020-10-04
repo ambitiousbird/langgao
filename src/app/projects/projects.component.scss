@@ -62,6 +62,7 @@
 
 #mobile{
   .info{
+    text-align: left;
     border-left: solid rgb(68, 160, 189) 10px;
     background-color:rgba(124, 168, 155, 0.52);
     p{
@@ -79,4 +80,86 @@
 
 .accomplishments{
   text-align: left;
+}
+
+.mobile-demo{
+  width:60%;
+  opacity:1
+}
+
+#lemon-music{
+  // width:100%;
+  .image-container{
+    width:42%;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  .project-content{
+    width:58%
+  }
+}
+
+.section-content{
+  margin-bottom: 60px;
+}
+
+#wearable-systems{
+  display: flex;
+  flex-flow: row wrap;
+  h2, p{
+    flex: 1 100%;
+  }
+
+  .row{
+    flex: 1 0 0; 
+    margin:0;
+  }
+
+  .image-container{
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12);
+    height: 650.883px;
+  }
+}
+
+#wearable{
+  overflow:auto;
+
+  .project-content{
+    margin-top:-65px;
+  }
+}
+
+#election, #reasoning{
+  margin: 0 4% 20px 4%;
+  > * {
+    flex: 1 100%;
+  }
+  display: flex;
+  flex-flow: nowrap;
+  div{
+    flex: 1 auto;
+  }
+  .image-container{
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12);
+    min-width: 45%;
+  }
+}
+
+#election{
+  .project-content{
+    margin-left:3%;
+  }
+}
+
+#reasoning{
+  .project-content{
+    order:1
+  }
+  .image-container{
+    order:2
+  }
+}
+
+@media only screen and (max-width:1249px){
+  
 }

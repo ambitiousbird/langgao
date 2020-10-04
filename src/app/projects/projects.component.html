@@ -1,268 +1,119 @@
-<mdb-carousel class="carousel slide carousel-fade" id="project" [animation]="'fade'" >
-    <mdb-carousel-item>
-      <div class="view">
-        <video class="video-fluid" autoplay loop disablePictureInPicture>
-            <source src="../../assets/videos/discussion.mp4" type="video/mp4" />
-        </video>
-        <div class="mask rgba-black-strong waves-light" mdbWavesEffect></div>
-      </div>
-      <div class="carousel-caption">
-        <h3 class="h3-responsive">Web Development</h3>
-        <ul class="capability">
-            <li>Design client-side and server-side architecture</li>
-            <li>Development in React, Angular, Node.js,and more </li>
-            <li>Application deployment on AWS and other cloud services</li>
-            <li>Participate in CI/CD development environment using Agile to develop, unit test, and deploy</li>
-        </ul>
-        <a mdbBtn color="secondary" mdbWavesEffect href="/projects#web">
-            <mdb-icon fas icon="clone" class="left"></mdb-icon>View projects
-          </a>
-            <!-- A strong sense of ownership and responsibility for code quality that follows best practices
-            A strong passion for learning and adapting to new technologies
-            Ability to think critically and independent. -->
-      </div>
-    </mdb-carousel-item>
-    <mdb-carousel-item>
-      <div class="view">
-        <video class="video-fluid" autoplay loop>
-            <source src="../../assets/videos/coding.mp4" type="video/mp4" />
-        </video>
-        <div class="mask rgba-black-slight waves-light" mdbWavesEffect></div>
-      </div>
-      <div class="carousel-caption">
-        <h3 class="h3-responsive">Mobile Development</h3>
-        <ul class="capability">
-            <li>Design, implement and maintain mobile applications using REST web services</li> 
-            <li>Develop and manage well-functioning databases and applications</li>
-            <li>Create use cases and develop functional documentation for projects and system enhancements included detailed training materials</li>
-        </ul>
-        <a mdbBtn color="success" mdbWavesEffect href="/projects#mobile">
-          <mdb-icon fas icon="clone" class="left"></mdb-icon>View projects
-        </a>
-      </div>
-    </mdb-carousel-item>
-    <mdb-carousel-item>
-      <div class="view">
-        <video class="video-fluid" autoplay loop>
-            <source src="../../assets/videos/api.mp4" type="video/mp4" />
-        </video>
-        <div class="mask rgba-black-strong waves-light" mdbWavesEffect></div>
-      </div>
-      <div class="carousel-caption">
-        <h3 class="h3-responsive">Data analysis</h3>
-        <ul class="capability">
-            <li>Use strong Python coding skills to research, design, develop and expand upon algorithms that will train neural networks to deliver actionable intelligence faster and more effectively</li>
-            <li>Develop deep-learning software prototypes that demonstrate potential usefulness</li>
-            <li>Analyze data from disparate sources including images, video, signals and more</li>
-        </ul>
-        <a mdbBtn color="pink" mdbWavesEffect href="projects#machine-learning">
-          <mdb-icon fas icon="clone" class="left"></mdb-icon>View projects
-        </a>
-      </div>
-    </mdb-carousel-item>
+<mdb-carousel class="carousel slide carousel-fade" id="project" [animation]="'fade'">
+  <mdb-carousel-item *ngFor="let intro of introduction">
+    <div class="view">
+      <video class="video-fluid" autoplay loop disablePictureInPicture>
+        <source src="../../assets/videos/{{intro.backgroundVideo}}" type="video/mp4" />
+      </video>
+      <div class="mask rgba-black-strong waves-light" mdbWavesEffect></div>
+    </div>
+    <div class="carousel-caption">
+      <h3 class="h3-responsive">{{intro.header}}</h3>
+      <ul class="capability" *ngFor="let capability of intro.capabilities">
+        <li>{{capability}}</li>
+      </ul>
+      <a mdbBtn color="secondary" mdbWavesEffect href={{intro.URL}}>
+        <mdb-icon fas icon="clone" class="left"></mdb-icon>View projects
+      </a>
+    </div>
+  </mdb-carousel-item>
 </mdb-carousel>
 
-<section id="web" class="text-center my-5">
-    <h2 class="h1-responsive font-weight-bold my-5">Web Development Demos</h2>
-    <p class="grey-text w-responsive mx-auto mb-5">Full stack web development with React, Nodejs, Express, MongoDB, and more</p>
-    <mdb-carousel [isControls]="true" class="carousel-multi-item multi-animation" [type]="'carousel-multi-item'" [animation]="'slide'">
-        <mdb-carousel-item *ngFor="let item of slides; let i = index">
-            <div class="col-md-6 pb-2" [ngClass]="{'d-none d-md-block': cardIndex !== 0}" *ngFor="let card of item; let cardIndex = index">
-                <mdb-card  cascade="true">
-                    <div>
-                        <div class="view view-cascade overlay waves-light" mdbWavesEffect>
+<section id={{topic.id}} class="text-center my-5" *ngFor="let topic of topics;let i = index">
+  <h2 class="h1-responsive font-weight-bold my-5">{{topic.name}}</h2>
+  <p class="grey-text w-responsive mx-auto mb-5">{{topic.greeting}}</p>
+  <div *ngIf="topic.name === 'Web Development Demos'; else otherTopics" class="section-content">
+    <mdb-carousel [isControls]="true" class="carousel-multi-item multi-animation" [type]="'carousel-multi-item'"
+      [animation]="'slide'">
+      <mdb-carousel-item *ngFor="let item of slides; let i = index">
+        <div class="col-md-6 pb-2" [ngClass]="{'d-none d-md-block': cardIndex !== 0}"
+          *ngFor="let card of item; let cardIndex = index">
+          <mdb-card cascade="true">
+            <div>
+              <div class="view view-cascade overlay waves-light" mdbWavesEffect>
 
-                            <!--Video source-->
-                            <video class="video-fluid" autoplay loop *ngIf="!card.source_is_image">
-                                <source src={{card.source}} type="video/mp4" />
-                            </video>
-                            <img *ngIf="card.source_is_image" class="video-fluid" src={{card.source}} alt={{card.title}}>
-                            <a href={{card.link}} target="_blank">
-                                <div class="mask rgba-white-slight" mdbWavesEffect></div>
-                            </a>
-                        </div>
+                <!--Video source-->
+                <video class="video-fluid" autoplay loop *ngIf="!card.source_is_image">
+                  <source src={{card.source}} type="video/mp4" />
+                </video>
+                <img *ngIf="card.source_is_image" class="video-fluid" src={{card.source}} alt={{card.title}}>
+                <a href={{card.link}} target="_blank">
+                  <div class="mask rgba-white-slight" mdbWavesEffect></div>
+                </a>
+              </div>
 
-                        <mdb-card-body>
-                            <!-- <p innerHTML={{card.description}}>{{card.description}}</p>  -->
-                            <a href="" [ngClass]="card.icon_color">
-                                <h5 class="font-weight-bold mt-2 mb-3"><i class="fa pr-2" [ngClass]="card.icon"></i>{{card.category}}</h5>
-                            </a>
-                            <h4 class="font-weight-bold mb-3">{{card.title}}</h4>
-                            <p class="grey-text">Tech Stack: {{card.tech_stack}}</p>
-                            <h4 class="pt-2 pb-2">{{card.intro}}</h4>
-                            <ul class="accomplishments">
-                                <li innerHTML={{features.feature}} *ngFor="let features of card.description">{{features.feature}}</li>
-                            </ul>
-                        </mdb-card-body>
+              <mdb-card-body>
+                <a href="" [ngClass]="card.icon_color">
+                  <h5 class="font-weight-bold mt-2 mb-3"><i class="fa pr-2" [ngClass]="card.icon"></i>{{card.category}}
+                  </h5>
+                </a>
+                <h4 class="font-weight-bold mb-3">{{card.title}}</h4>
+                <p class="grey-text">Tech Stack: {{card.tech_stack}}</p>
+                <h4 class="pt-2 pb-2">{{card.intro}}</h4>
+                <ul class="accomplishments">
+                  <li innerHTML={{features.feature}} *ngFor="let features of card.description"></li>
+                </ul>
+              </mdb-card-body>
 
-                        <div class="view view-cascade overlay waves-light" mdbWavesEffect>
-                            <a class="btn btn-success btn-rounded btn-md waves-light" href= {{card.preview_link}}
-                            target="_blank">{{card.try}}</a>
-                            <a class="btn btn-primary btn-rounded btn-md" href= {{card.source_link}}
-                            target="_blank">{{card.view}}</a>
-                        </div>
+              <div class="view view-cascade overlay waves-light" mdbWavesEffect>
+                <a class="btn btn-success btn-rounded btn-md waves-light" href={{card.preview_link}}
+                  target="_blank">{{card.try}}</a>
+                <a class="btn btn-primary btn-rounded btn-md" href={{card.source_link}}
+                  target="_blank">{{card.view}}</a>
+              </div>
 
-                    </div>
-                </mdb-card>
             </div>
-        </mdb-carousel-item>
+          </mdb-card>
+        </div>
+      </mdb-carousel-item>
     </mdb-carousel>
-</section>
+  </div>
 
-<section id="mobile" class="my-5" style="height:auto; ">
-    <hr class="my-5">
-    <h2 class="h1-responsive font-weight-bold text-center my-5">Mobile App Demos</h2>
-    <p class="grey-text text-center w-responsive mx-auto mb-5">Stay tuned for more Apps!</p>
-    <div class="row">
-        <div class="col-lg-5 mb-lg-0 mb-5">
-            <!--Image-->
-            <div class="ml-5 pl-2 view">
-                <img src="./../../assets/img/projects/Lemon Music.gif" alt="Sample project image" class="img-fluid rounded z-depth-1" style="width:60%;opacity:1">
-                <div class="mask waves-light" mdbWavesEffect></div>
-            </div>
+  <ng-template #otherTopics>
+    <div class="row d-flex justify-content-center" *ngFor="let project of topic.projects">
+      <!-- <div class="mb-lg-0 mb-5" [ngClass]="topic.id === 'mobile'? 'col-lg-5':'col-lg-6'"> -->
+      <div id={{project.id}} class="row rounded " [ngClass]="{'table-cell col-md-6 col-xl-5': topic.id=='wearable-systems'}">
+        <div class="view rounded image-container overlay">
+          <img src="./../../assets/img/projects/{{project.img}}" alt="Sample project image"
+            class="img-fluid rounded z-depth-1" [ngClass]="{'mobile-demo': project.name === 'Lemon Music'}">
+          <div class="mask waves-light" mdbWavesEffect></div>
+        </div>
 
-        </div>
-        <div class="col-lg-7">
-            <!-- Grid row -->
-            <div class="mb-3  mt-5">
-                <div class="col-md-1 col-2">
-                    <i class="fa fa-music fa-2x cyan-text"></i>
-                </div>
-                <div class="col-md-11 col-10">
-                    <h5 class="font-weight-bold mb-3">Lemon Music</h5>
-                    <p class="grey-text">A music web app built with React + React-Router + Redux + ES6 + Webpack</p>
-                    <br>
-                    <div class="accomplishments-container">
-                        <ul class="accomplishments">
-                            <li>Implemented routing with <strong>React-router</strong> and used <strong>webpack</strong> for dependency graph building and
-                                bundle generation</li>
-                            <li>Configured Stylus as <strong></strong>CSS preprocessor </li>
-                            <li>Managed the states and properties of songs using <strong>Redux</strong> with actions, reducers, and store
-                                </li>
-                            <li>Made animations for music player component with <strong>react-transition-group</strong></li>
-                            <li>Used <strong>JSONP</strong> to fetch data from QQ Music <strong>API</strong> and <strong>React-lazyload</strong> to optimize image loading</li>
-                        </ul>
-                    </div>
-                    <a class="btn btn-info btn-rounded btn-md" href="https://ambitiousbird.github.io/Lemon-Music/" target="_blank">Online preview</a>
-                    <a class="btn btn-primary btn-rounded btn-md" href="https://github.com/ambitiousbird/Lemon-Music" target="_blank">View source code</a>
-                </div>
-                <div class="info">
-                    <p><strong>Note</strong> <br>
-                        If you are accessing the online preview site from a laptop, it is recommended that you resize the brower to mimic a phone screen for best experience 
-                    </p>
-                </div>
+        <div class="project-content">
+          <!-- Grid row -->
+          <div class="mb-3  mt-5">
+            <!-- <div class="col-md-1 col-2" *ngIf="project.name === 'Lemon Music' ">
+              <i class="fa fa-music fa-2x cyan-text"></i>
+            </div> -->
+            <div class="col-md-11 col-10">
+              <div class="row justify-content-center" *ngIf="project.name === 'Lemon Music'">              
+                <i class="fa fa-music fa-2x cyan-text"></i>
+                <h5 class="font-weight-bold mb-3"> &nbsp; {{project.name}}</h5>
+              </div>
+              <p class="grey-text">{{project.description}}</p>
+              <br>
+
+              <h4 class="font-weight-bold my-3">{{project.title}}</h4>
+              <p class="grey-text text-left">{{project.abstract}}</p>
+
+              <div class="accomplishments-container" *ngIf="!!project.achievements">
+                <ul class="accomplishments" *ngFor="let achievement of project.achievements">
+                  <li innerHTML={{achievement}}></li>
+                </ul>
+              </div>
+              <a class="btn btn-info btn-rounded btn-md" *ngIf="!!project.previewURL" href={{project.previewURL}}
+                target="_blank">Online preview</a>
+              <a class="btn btn-primary btn-rounded btn-md" *ngIf="!!project.sourceCodeURL"
+                href={{project.sourceCodeURL}} target="_blank">View source code</a>
+              <a class="btn btn-primary btn-rounded btn-md" *ngIf="!!project.report"
+                href="../../assets/pdf/{{project.report}}" target="_blank">View project report</a>
             </div>
+            <div class="info" *ngIf="!!project.note">
+              <p><strong>Note</strong> <br> {{project.note}}</p>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
-    <hr class="my-5">
+  </ng-template>
+  <hr class="my-5" *ngIf="i!=topics.length-1">
 </section>
-
-<section id="wearable-systems" class="text-center my-5" style="height:auto">
-    <h2 class="h1-responsive font-weight-bold my-5">Smart Wearable Systems</h2>
-    <p class="grey-text w-responsive mx-auto mb-5">My past research involves security and medical applications of embedded sensor devices.</p>
-    <div class="row d-flex justify-content-center">
-        <div class="col-md-6 col-xl-5 mb-4 table-cell" id="wearable">
-            <!--Featured image-->
-            <div class="view overlay rounded z-depth-1">
-                <img src="./../../assets/img/projects/authentication.png" class="img-fluid" alt="Sample project image">
-                <div class="mask waves-light" mdbWavesEffect></div>
-            </div>
-
-            <div class="card-body pb-0">
-                <h4 class="font-weight-bold my-3">Multiple device authentication with accelerometer data</h4>
-                <p class="grey-text text-left">As the volume of many devices becomes smaller and smaller, typing password to authentication device communication
-                    is no longer doable in many cases. While the plausibility of pairing up two devices using accelerometer
-                    data has been explored, little is known about the authentication of multiple devices with acceleration
-                    sensor. In this research we studied various possible algorithms to solve this problem.
-                </p>
-                <!-- <a class="btn btn-indigo btn-sm">
-                    <i class="fa fa-clone left"></i> View project</a> -->
-            </div>
-        </div>
-
-        <div class="col-md-6 col-xl-5 mb-4 table-cell" id = "mci">
-            <!--Featured image-->
-            <div class="view overlay rounded z-depth-1">
-                <img src="./../../assets/img/projects/MCI.png" class="img-fluid" alt="Sample project image">
-                <div class="mask waves-light" mdbWavesEffect></div>
-            </div>
-
-            <div class="card-body pb-0">
-                <h4 class="font-weight-bold my-3">Motion analysis of Mild Cognitive Impairment (MCI) patients using accelerometer</h4>
-                <p class="grey-text text-left">MCI is an intermediate stage of brain malfunction between normal aging and more serious dementia, of
-                    which the most common one is Alzheimer’s disease. In our study of MCI patients’ hand movement patterns,
-                    we found more pauses and direction changes compared to normal people. We believe these findings open
-                    up new opportunities for future research on MCI diagnosis.
-                </p>
-                <a class="btn btn-primary btn-rounded btn-md" href="../../assets/pdf/MCI motion analysis.pdf" target="_blank">View project report</a>
-            </div>
-        </div>
-    </div>
-    <hr class="my-5">
-</section>
-
-    <section id="machine-learning" class="my-5" style="height:auto">
-        <!-- Section heading -->
-        <h2 class="h1-responsive font-weight-bold text-center my-4">Machine Learning and Big Data</h2>
-        <div class="row d-flex justify-content-center mb-5">
-                <div class="view col-md-5 mb-4 view overlay rounded z-depth-1 table-cell mr-4">
-                    <img src="./../../assets/img/projects/twittermining.png" class="img-fluid" alt="Sample project image">
-                    <div class="mask waves-light" mdbWavesEffect></div>
-                </div>
-
-                <div class="col-md-5 table-cell ml-4" id="election">
-                    <!-- Grid row -->
-                    <div class="mb-3  mt-5">
-                        <div class="col-md-11 col-10 text-left">
-                            <h5 class="font-weight-bold mb-3">Emotion analysis on text mining for election prediction</h5>
-                            <p class="grey-text">In this project, I measured the public opinions on presidential candidates based on eight emotions:
-                                anger, anticipation, disgust, fear, joy, sadness, surprise, trust, by applying text mining on
-                                the most recent tweets at the time. Compared to traditional text mining methods which categorize
-                                emotions simply as neutral, negative, and positive, this method provides more details and perspectives
-                                for emotion analysis.</p>
-                            <br>
-                            <div class="accomplishments-container">
-                                <ul>
-                                    <li>Collected and analyzed 1.25M tweets using Python and Twitter API</li>
-                                    <li>Performed sentiment analysis using the open source dictionary SentiWordNet</li>
-                                </ul>
-                            </div>
-                            <a class="btn btn-primary btn-rounded btn-md" href="../../assets/pdf/text-mining for emotion analysis.pdf" target="_blank">View project report</a>
-                        </div>
-                    </div>
-                </div>
-
-        </div>
-
-        <div class="row d-flex justify-content-center mt-4">
-            <div class="col-md-5 table-cell ml-4" id = "reasoning">
-                <!-- Grid row -->
-                <div class="mb-3  mt-5">
-                    <div class="col-md-11 col-10 text-left">
-                        <h5 class="font-weight-bold mb-3">Towards Learning based Reasoning Systems</h5>
-                        <p class="grey-text">In this project, we investigated several learning based reasoning methods. First, we explored the
-                            ways to build explicit rules for problem solving. It corresponds to the learning process of conscious
-                            reasoning and the decision tree based technique is also applied the project. As conscious reasoning
-                            may not solve certain problems in our practice, we also investigated making implicit rules for
-                            problem solving. More specifically, we utilized the deep neural network to simulate the process
-                            of unconscious reasoning. Lastly, we explored research progress on emotion and creativity.
-                        </p>
-                        <br>
-                        <div class="accomplishments-container">
-                            <ul>
-                                <li>Used decicion tree on classification of Iris flower using the Iris Plants database</li>
-                                <li>Applied Deep Neural Network on the MNIST dataset, CIFAR dataset and PASCAL VOC 2007 dataset.</li>
-                            </ul>
-                        </div>
-                        <a class="btn btn-primary btn-rounded btn-md" href="../../assets/pdf/AI Project Report.pdf" target="_blank">View project report</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="view col-md-5 mb-4 view overlay rounded z-depth-1 table-cell mr-4">
-                <img src="../../assets/img/projects/Learning based Reasoning Systems.png" class="img-fluid" alt="Sample project image">
-                <div class="mask waves-light" mdbWavesEffect></div>
-            </div>
-        </div>
-
-    </section>

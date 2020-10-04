@@ -1,0 +1,276 @@
+{
+    "introduction":[
+        {
+            "backgroundVideo":"discussion.mp4",
+            "header":"Web Development",
+            "capabilities":[
+                "Design client-side and server-side architecture",
+                "Development in React, Angular, Node.js,and more",
+                "Application deployment on AWS and other cloud services",
+                "Participate in CI/CD development environment using Agile to develop, unit test, and deploy"
+            ],
+            "URL":"/projects#web"
+        },
+        {
+            "backgroundVideo":"coding.mp4",
+            "header":"Mobile Development",
+            "capabilities":[
+                "Design, implement and maintain mobile applications using REST web services","Develop and manage well-functioning databases and applications",
+                "Create use cases and develop functional documentation for projects and system enhancements included detailed training materials"
+            ],
+            "URL":"/projects#mobile"
+        },
+        {
+            "backgroundVideo":"api.mp4",
+            "header":"Data analysis",
+            "capabilities":[
+                "Use strong Python coding skills to research, design, develop and expand upon algorithms that will train neural networks to deliver actionable intelligence faster and more effectively",
+                "Develop deep-learning software prototypes that demonstrate potential usefulness",
+                "Analyze data from disparate sources including images, video, signals and more"
+            ],
+            "URL":"projects#machine-learning"
+        }
+    ],
+    "topics":[
+        {
+            "name":"Web Development Demos",
+            "id":"web",
+            "greeting":"Full stack web development with React, Nodejs, Express, MongoDB, and more",
+            "projects":[
+                {
+                    "source": "../../assets/img/projects/stonie.mp4",
+                    "link": "https://stonie.herokuapp.com",
+                    "icon": "fa-shopping-cart",
+                    "icon_color": "cyan-text",
+                    "category": "E-commerce",
+                    "title": "STONIE",
+                    "tech_stack": "Nodejs + Express + MongoDB + Handlebars",
+                    "intro": "An E-commerce Website for stones",
+                    "description": [{
+                        "feature": "Utilized <strong>CSRF</strong> for online session security and <strong>Passport</strong> middleware for unobtrusive authentication"
+                    },
+                    {
+                        "feature": "Implemented payment system with <strong>stripe API</strong>"
+                    },
+                    {
+                        "feature": "Managed user and product data with <strong>MongoDB</strong>"
+                    }
+                    ],
+                    "try": "Try it out",
+                    "preview_link": "https://stonie.herokuapp.com",
+                    "view": "View source code",
+                    "source_link": "https://github.com/ambitiousbird/stonie"
+               },
+               {
+                "source": "../../assets/img/projects/sharemeshi.mp4",
+                "link": "https://sharemeshi.com",
+                "icon": "fa-shopping-cart",
+                "icon_color": "orange-text",
+                "category": "E-commerce",
+                "title": "Sharemeshi",
+                "tech_stack": "Angular 6 + Express + MongoDB + Node.js",
+                "intro": "A food sharing platform",
+                "description": [
+                  {"feature": "Implemented user authentication with firebase"},
+                  {"feature": "Integrated <strong>Paypal API</strong> for payment system"},
+                  {"feature": "Managed user and product data with <strong>MongoDB</strong>"}
+                ],
+                "try": "Online preview",
+                "preview_link": "https://sharemeshi.com",
+                "view": "View source code",
+                "source_link": "https://github.com/ambitiousbird/sharemeshi"
+              },
+              {
+                "source": "../../assets/img/projects/demographics.mp4",
+                "link": "https://smart-demographics.herokuapp.com/",
+                "icon": "fa-wrench",
+                "icon_color": "cyan-text",
+                "category": "Tools",
+                "title": "Demographics Analysis",
+                "tech_stack": "React + Node.js + Express + Redux + React Router + Webpack",
+                "intro": "Enter image link and get a brief demographics analysis report!",
+                "description": [
+                  {"feature": "Developed the <strong>ES6</strong> based frontend with <strong>React Router</strong>, <strong>Redux</strong>, and <strong>Clarifai API</strong>"},
+                  {"feature": "Implemented backend with <strong>Node.js</strong>, <strong>Express.js</strong>, and <strong>PostgreSQL</strong>; Used <strong>REST</strong> to leverage the HTTP protocol"},
+                  {"feature": "Performed real-time end-to-end integration with Apache Kafka in Apache Spark’s Structured Streaming"}
+                ],
+                "try": "Try it out",
+                "preview_link": "https://smart-demographics.herokuapp.com/",
+                "view": "View source code",
+                "source_link": "https://github.com/ambitiousbird/ML-demographics"
+              },
+              {
+                "source": "../../assets/img/projects/robofactory.mp4",
+                "link": "https://ambitiousbird.github.io/robofactory/",
+                "icon": "fa-gamepad",
+                "icon_color": "green-text",
+                "category": "Entertainment",
+                "title": "Robot Factory",
+                "tech_stack": "React + ES6 + Redux",
+                "intro": "Search for your favorite robots!",
+                "description": [
+                  {"feature": "Created responsive, resuable react components"},
+                  {"feature": "Added a search function that quickly renders the search results"},
+                  {"feature": "Managed states with <strong>Redux</strong>"}
+                ],
+                "try": "Try it out",
+                "preview_link": "https://ambitiousbird.github.io/robofactory/",
+                "view": "View source code",
+                "source_link": "https://github.com/ambitiousbird/robofactory"
+              },
+              {
+                "source": "../../assets/img/projects/crypto.mp4",
+                "link": "http://cryptocurrency-dash.s3-website.us-east-2.amazonaws.com/",
+                "icon": "fa-dollar-sign",
+                "icon_color": "blue-text",
+                "category": "Bitcoin",
+                "title": "Crypto Dash",
+                "tech_stack": "React + Highcharts + Cryptocompare",
+                "intro": "Check your favorite bitcoin prices!",
+                "description": [
+                  {"feature": "Designed UI with styled-components"},
+                  {"feature": "Utilized <Strong>Cryptocompare API</Strong> to get crypto coin prices and list and <Strong>moment</Strong> to validate and manipulate date"},
+                  {"feature": "Visualized crypto data with <Strong>Highcharts</Strong>"}
+                ],
+                "try": "Try it out",
+                "preview_link": "http://cryptocurrency-dash.s3-website.us-east-2.amazonaws.com/",
+                "view": "View source code",
+                "source_link": "https://github.com/ambitiousbird/cryptodash"
+              },
+              {
+                "source": "../../assets/img/projects/userdash.mp4",
+                "link": "https://user-dash.firebaseapp.com/",
+                "icon": "fa-table",
+                "icon_color": "green-text",
+                "category": "Data processing",
+                "title": "User Dash",
+                "tech_stack": "AngularJS + Node.js + MongoDB + Highcharts + Firebase",
+                "intro": "Random data visualization",
+                "description": [
+                  {"feature": "Visualized random user data in <strong>Highcharts</strong>"},
+                  {"feature": "Implemented data manipulation functionalities with <strong>Node.js</strong> and <Strong>MongoDB</Strong>"}
+                ],
+                "try": "Try it out",
+                "preview_link": "https://user-dash.firebaseapp.com/",
+                "view": "View source code",
+                "source_link": "https://github.com/ambitiousbird/User-dash"
+              },
+              {
+                "source": "../../assets/img/projects/hibersense.png",
+                "source_is_image": true,
+                "link": "http://hibersense-dashboard.s3-website.us-east-2.amazonaws.com/",
+                "icon": "fa-chart-pie",
+                "icon_color": "blue-text",
+                "category": "Data Visualization",
+                "title": "HiberSense",
+                "tech_stack": "React + D3 + Redux + React Router",
+                "intro": "Monitor and control room temperatures in real time",
+                "description": [
+                  {"feature": "Utilized Redux extensively for state management"},
+                  {"feature": "Computed and synchronized energy and temperature usage data between multiple graphs"},
+                  {"feature": "Visualized temperature and energy data with <Strong>D3</Strong>"},
+                  {"feature": "Hosted the application on <strong>AWS S3</strong>"}
+                ],
+                "try": "Try it out",
+                "preview_link": "http://hibersense-dashboard.s3-website.us-east-2.amazonaws.com/",
+                "view": "View source code",
+                "source_link": "https://github.com/ambitiousbird/hibersense-dash"
+              },
+              {
+                "source": "../../assets/img/projects/socialDetector.png",
+                "source_is_image": true,
+                "link": "http://socialdetection.s3-website.us-east-2.amazonaws.com/",
+                "icon": "fa-search",
+                "icon_color": "green-text",
+                "category": "Data Scrapping",
+                "title": "Social Detector",
+                "tech_stack": "React + Redux + Node.js + Express + MongoDB + JWT + Passport + Python + BeautifulSoup",
+                "intro": "Detect online social traces",
+                "description": [
+                  {"feature": "Implemented google scrawler with <strong>Python</strong> and <strong>BeautifulSoup</strong>"},
+                  {"feature": "Added user authentication with <strong>Node.js</strong>,<strong>Passport</strong>,<strong>JWT</strong> and <Strong>MongoDB</Strong>"},
+                  {"feature": "Deployed the application with <strong>AWS EC2</strong> and <strong>S3</strong>"}
+                ],
+                "try": "Try it out",
+                "preview_link": "http://socialdetection.s3-website.us-east-2.amazonaws.com/",
+                "view": "View source code",
+                "source_link": "https://github.com/ambitiousbird/social-detection"
+              }
+            ]
+        },
+        {
+            "name":"Mobile App Demos",
+            "id":"mobile",
+            "greeting":"Stay tuned for more Apps!",
+            "projects":[
+                {
+                    "img":"Lemon Music.gif",
+                    "id":"lemon-music",
+                    "name":"Lemon Music",
+                    "description":"A music web app built with React + React-Router + Redux + ES6 + Webpack",
+                    "achievements":[
+                        "Implemented routing with <strong>React-router</strong> and used <strong>webpack</strong> for dependency graph building and bundle generation",
+                        "Configured Stylus as CSS preprocessor",
+                        "Managed the states and properties of songs using <strong>Redux</strong> with actions, reducers, and store",
+                        "Made animations for music player component with <strong>react-transition-group</strong>",
+                        "Used <strong>JSONP</strong> to fetch data from QQ Music <strong>API</strong> and <strong>React-lazyload</strong> to optimize image loading"
+                    ],
+                    "previewURL":"https://ambitiousbird.github.io/Lemon-Music/",
+                    "sourceCodeURL":"https://github.com/ambitiousbird/Lemon-Music",
+                    "note":"If you are accessing the online preview site from a laptop, it is recommended that you resize the browser to mimic a phone screen for best experience"
+                }
+            ]
+        },
+        {
+          "name":"Machine Learning and Big Data",
+          "id":"machine-learning",
+          "projects":[
+              {
+                  "img":"twittermining.png",
+                  "id":"election",
+                  "title":"Emotion analysis on text mining for election prediction",
+                  "abstract":"In this project, I measured the public opinions on presidential candidates based on eight emotions: anger, anticipation, disgust, fear, joy, sadness, surprise, trust, by applying text mining on the most recent tweets at the time. Compared to traditional text mining methods which categorize emotions simply as neutral, negative, and positive, this method provides more details and perspectives for emotion analysis.",
+                  "achievements":[
+                      "Collected and analyzed 1.25M tweets using Python and Twitter API",
+                      "Performed sentiment analysis using the open source dictionary SentiWordNet"
+                  ],
+                  "report":"text-mining for emotion analysis.pdf"
+
+              },
+              {
+                  "img":"Learning based Reasoning Systems.png",
+                  "id":"reasoning",
+                  "title":"Learning based Reasoning Systems",
+                  "abstract":"In this project, we investigated several learning based reasoning methods. First, we explored the ways to build explicit rules for problem solving. It corresponds to the learning process of conscious reasoning and the decision tree based technique is also applied the project. As conscious reasoning may not solve certain problems in our practice, we also investigated making implicit rules for problem solving. More specifically, we utilized the deep neural network to simulate the process of unconscious reasoning. Lastly, we explored research progress on emotion and creativity.",
+                  "achievements":[
+                      "Used decision tree on classification of Iris flower using the Iris Plants database",
+                      "Applied Deep Neural Network on the MNIST dataset, CIFAR dataset and PASCAL VOC 2007 dataset."
+                  ],
+                  "report":"AI Project Report.pdf"
+              }
+          ]
+      },
+        {
+            "name":"Smart Wearable Systems",
+            "id":"wearable-systems",
+            "greeting":"My past research projects include security and medical applications of embedded sensor devices.",
+            "projects":[
+                {
+                    "img":"authentication.png",
+                    "id":"wearable",
+                    "title":"Multiple device authentication with accelerometer data",
+                    "abstract":"As the volume of many devices becomes smaller and smaller, typing password to authentication device communication is no longer doable in many cases. While the plausibility of pairing up two devices using accelerometer data has been explored, little is known about the authentication of multiple devices with acceleration sensor. In this research we studied various possible algorithms to solve this problem.",
+                    "report":""
+                },
+                {
+                    "img":"MCI.png",
+                    "id":"mci",
+                    "title":"Motion analysis of Mild Cognitive Impairment (MCI) patients using accelerometer",
+                    "abstract":"MCI is an intermediate stage of brain malfunction between normal aging and more serious dementia, of which the most common one is Alzheimer’s disease. In our study of MCI patients’ hand movement patterns, we found more pauses and direction changes compared to normal people. We believe these findings open up new opportunities for future research on MCI diagnosis.",
+                    "report":"MCI motion analysis.pdf"
+                }
+            ]
+        }
+
+    ]
+}

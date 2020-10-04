@@ -1,0 +1,263 @@
+{
+  "summary": "A professional with 2 years of experience in Analysis, Design, Development, Testing and Implementation of Web Applications in Client/Server environment using HTML, CSS, JavaScript, Bootstrap, jQuery, TypeScript, JSON, Angular JS, Angular 6, React, Node.js, Core JAVA/J2EE Technologies, Spring Framework, Rest & Soap web services.",
+  "socialNetworks":[
+    {
+      "link":"https://www.linkedin.com/in/lang-gao-294b1087/",
+      "icon":"fa-linkedin"
+    },
+    {
+      "link":"https://github.com/ambitiousbird",
+      "icon":"fa-github"
+    },
+    {
+      "link":"https://twitter.com/gaolangfr?lang=en",
+      "icon":"fa-twitter"
+    },
+    {
+      "link":"https://www.facebook.com/profile.php?id=100005123865441",
+      "icon":"fa-facebook-f"
+    }
+  ],
+  "education": [{
+      "university": "Temple University",
+      "degree": "Master of Science",
+      "period":"Jan 2016 - May 2018",
+      "subject": "Computer Science"
+    },
+    {
+      "university": "Temple University",
+      "degree": "PhD (drop out)",
+      "period":"Sep 2014 - Dec 2015",
+      "subject": "Physical Chemistry"
+    },
+    {
+      "university": "Hubei University",
+      "degree": "Bachelor of Engineering",
+      "period":"Sep 2010 - June 2014",
+      "subject": "Chemical Engineering"
+    }
+  ],
+  "skills":[
+    {
+      "category":"Programming Languages",
+      "icons":[
+        "devicon-java-plain-wordmark colored",
+        "devicon-javascript-plain",
+        "devicon-c-plain colored",
+        "devicon-cplusplus-plain-wordmark colored",
+        "devicon-python-plain-wordmark colored",
+        "devicon-swift-plain-wordmark colored"
+      ]
+    },
+    {
+      "category":"Web",
+      "icons":[
+        "devicon-react-original-wordmark colored",
+        "devicon-angularjs-plain-wordmark colored",
+        "devicon-nodejs-plain-wordmark colored",
+        "devicon-express-original-wordmark colored",
+        "devicon-jquery-plain-wordmark colored",
+        "devicon-html5-plain-wordmark",
+        "devicon-css3-plain-wordmark",
+        "devicon-bootstrap-plain-wordmark colored"
+      ]
+    },
+    {
+      "category":"Database",
+      "icons":[
+        "devicon-postgresql-plain-wordmark colored",
+        "devicon-mysql-plain-wordmark colored",
+        "devicon-mongodb-plain-wordmark colored"
+      ]
+    },
+    {
+      "category":"Design",
+      "icons":[
+        "devicon-illustrator-plain colored",
+        "devicon-photoshop-plain colored"
+      ]
+    }
+  ],
+  "experience": [{
+      "company": "Capital Once",
+      "location": "McLean, VA",
+      "period": "March 2020 to present",
+      "title": "UI developer",
+      "responsibilities": [
+        "Identify feature files in AngularJS directory and carefully analyze internal and external dependencies, and migrate services and components based on priority.",
+        "Develop UI in VS Code using Angular 8 with the EASE UI code base. Use SASS as CSS preprocessor for advanced styling and follow the requirement in the EASE BuildBook and apply similar theme and color to maintain consistency in the UI.",
+        "Utilize Nx to integrate the Monorepo development with Cypress, Jest, Typescript, and Prettier, keep the code DRY across the entire organization, and consistently build and test applications written with different tools and technologies.",
+        "Leverage Mr. Data to generate mock data at runtime to support in-browser end-to-end testing, integrate with mountebank so that REST APIs can serve the generated mock data to client applications, and to enable test scenarios to create mock data used in tests by transparently mocking downstream REST APIs (e.g. the UI's orchestration layer)",
+        "Implement services for dependency injection which binds UI data source with Web API for data input.",
+        "Create reusable components that can be easily configured and adapted to different scenarios to reduce code repetition. ",
+        "Refactor code in a routine basis to optimize code efficiency and reduce code repetition as application grows big and adhere to coding convention that is established at the beginning of the project.",
+        "Handle restricted routes for users with different privileges with Angular router guard, perform data transformation with pipes, and manipulate DOM with directives.",
+        "Implement NgRx pattern for data and state management for EASE individual features.",
+        "Rewrite the Typescript files to use the RxJS library for reactive programming with Observables, to facilitate composing asynchronous or callback-based code.",
+        "Manage source control with Git and build CI/CD pipelines with Jenkins.",
+        "Update documentation to inform team members of important changes.",
+        "Discuss with team members when technical challenges occur. Research on similar cases in community and redesign solution if needed.",
+        "Execute peer reviews in a routine basis to check for potential bugs to safeguard code correctness.",
+        "Participate in daily stand-up meeting to report deliverable progress, facing issues and blocking items, such that to be aware of the current progress of the entire project and what other team members are working on."
+      ]
+    },
+    {
+      "company": "SES Networks",
+      "location": "Manassas, VA",
+      "period": "August 2019 to February 2020 ",
+      "title": "UI developer",
+      "responsibilities": [
+        "Combined visual design technology (Adobe PS, Adobe Illustrator, InVision, etc.) to build attractive digital environments as well as create quality mockups and prototypes while comply with UI/UX industry standards.",
+        "Created components with Angular 7 and use RXJS to operate on Observables that pass data from API endpoints.",
+        "Handled restricted routes for users with different privileges with Angular router guard, perform data transformation with pipes, and manipulate DOM with directives.",
+        "Managed global traffic flow with AWS Route 53 to route end users to the best end points based on geo-proximity, latency and health.",
+        "Organized and managed application data with AWS S3 to meet security and efficiency requirements.",
+        "Used REST to create Angular services to send request from client and get response from server.",
+        "Wrote quality unit test code with the Jasmine and Karma and contribute to the end to end testing with Protractor.",
+        "Built shared UI components to enforce reusability by creating Angular libraries and publish to npm.",
+        "Used SASS as CSS preprocessor for advanced styling and worked with Angular materials to create attractive and consistent web design.",
+        "Managed source control with Git and built CI/CD pipelines with Jenkins",
+        "Participated in the daily stand up meeting and managed Jira board as a part of the SDLC ensure product delivery in a timely manner.",
+        "Optimized the application performance with Chrome Lighthouse, and by reducing JavaScript payload with code splitting, performing minification, and so on."
+      ]
+    },
+    {
+      "company": "Mutuality",
+      "location": "Philadelphia, PA",
+      "period": "January 2019 to July 2019",
+      "title": "Full Stack Developer",
+      "responsibilities": [
+        "Create UI designs with Adobe XD and Built web application with React, Webpack, and Redux.",
+        "Set up the routing configuration using React Router for various views and sub views.",
+        "Developed and maintained mobile application with React Native.",
+        "Implemented backend API end points with Node.js, Express, and MongoDB.",
+        "Debugged Restful API with the help of Postman and DevTools.",
+        "Utilized GIT as version control tool for effectively managing the code changes with team."
+      ]
+    },
+    {
+      "company": "Temple University",
+      "location": "Philadelphia, PA",
+      "period": "October 2018 to January 2019",
+      "title": "Web developer",
+      "responsibilities": [
+        "Designed, developed and maintained lab website with Adobe XD, React, Webpack, and Redux.",
+        "Maintain the Linux lab server for data storage and site hosting.",
+        "Implemented dynamic, interactive data visualization with D3.js.",
+        "Participated in weekly group meetings to under user needs and make sure the product  delivery meets user  requirements."
+      ]
+    },
+    {
+      "company": "Temple University",
+      "location": "Philadelphia, PA",
+      "period": "September 2014 - December 2016",
+      "title": "Graduate Teaching Assistant",
+      "responsibilities": [
+        "Led two weekly lab sessions to instruct undergraduate students in Python programming, Java Data Structures, and Computer and Network Security, answered questions, and graded programming assignments.",
+        "Led weekly recitations to demonstrate to students key knowledge points from lectures.",
+        "Held office hours to guide students on data structure assignments and questions.",
+        "Graded quizzes, programming assignments, projects, and exams."
+      ]
+    }
+  ],
+  "sideProjects":[
+    {
+      "tag":"stonie",
+      "name":"STONIE",
+      "date":"July 2018",
+      "description":"An E-commerce Website for stones",
+      "achievements":[
+        "Utilized CSRF for online session security and Passport middleware for unobtrusive authentication",
+        "Implemented payment system with stripe API",
+        "Managed user and product data with MongoDB"
+      ]
+    },
+    {
+      "tag":"lemonmusic",
+      "name":"Lemon Music",
+      "date":"June 2018",
+      "description":"React based music web application",
+      "achievements":[
+        "Implemented routing with React-router and used webpack for dependency graph building and bundle generation",
+        "Configured Stylus as CSS preprocessor",
+        "Managed states and properties of songs using Redux with actions, reducers, and store",
+        "Made animations for music player component with react-transition-group",
+        "Used Jsonp to fetch data from QQ Music API and React-lazyload to optimize image loading"
+      ]
+    },
+    {
+      "tag":"demographics",
+      "name":"Smart Demographics",
+      "date":"May 2018",
+      "description":"React based web application for demographic analysis of images",
+      "achievements":[
+        "Developed the ES6 based frontend with React Router, Redux, and Clarifai API",
+        "Implemented backend with Node.js and Express.js, used REST to leverage the HTTP protocol",
+        "Used Knex.js to connect to PostgreSQL database"
+      ]
+    },
+    {
+      "tag":"mci",
+      "name":"Mild Cognitive Impairment(MCI) Analysis Toolkit Development for MCI diagnosis",
+      "date":"Jan 2017 - Dec 2017",
+      "description":"",
+      "achievements":[
+        "Collected and analyzed acceleration data using Python for MCI diagnosis",
+        "Designed algorithms and protocols for optimum MCI diagnosis sensitivity and efficiency"
+      ]
+    },
+    {
+      "tag":"wearable",
+      "name":"STONIE",
+      "date":"Jan 2017 - Dec 2017",
+      "description":"Multiple wearable devices authentication based on acceleration data",
+      "achievements":[
+        "Developed an android app for acceleration data collection",
+        "Analyzed body movement patterns and generated secure cryptographic keys using Python",
+        "Designed algorithms for unobtrusive authentication of multiple devices"
+      ]
+    },
+    {
+      "tag":"reasoning",
+      "name":"Learning based Reasoning Systems",
+      "date":"May 2017",
+      "description":"",
+      "achievements":[
+        "Used decicion tree on classification of Iris flower using the Iris Plants database",
+        "Applied Deep Neural Network on the MNIST dataset, CIFAR dataset and PASCAL VOC 2007 dataset."
+      ]
+    },
+    {
+      "tag":"election",
+      "name":"Election Prediction",
+      "date":"May 2016",
+      "description":"A Python opinion mining project for president prediction",
+      "achievements":[
+        "Collected and analyzed 5 Million tweets using Python and Twitter API",
+        "Performed sentiment analysis using the open source dictionary SentiWordNet"
+      ]
+    }
+  ],
+  "publications":[
+    {
+      "link":"https://www.sciencedirect.com/science/article/pii/S0956566313006544",
+      "title":"A Highly Selective Sensor of Cysteine with Tunable Sensitivity and Detection Window Based on Dual-emission Ag Nanoclusters",
+      "authors":"J Zhu, X Song, L Gao, Z Li, Z Liu, S Ding, S Zou… ",
+      "journalLink":"https://www.sciencedirect.com/journal/biosensors-and-bioelectronics",
+      "journalName":"Biosensors & Bioelectronics",
+      "publishYear":"2014",
+      "database":"Elsevier",
+      "databaseLink":"https://www.elsevier.com/"
+    },
+    {
+      "link":"http://pubs.rsc.org/en/Content/ArticleLanding/2013/AN/c3an36734g#!divAbstract",
+      "title":"Localized surface plasmon resonance light-scattering detection of Hg(II) with 3-aminopropyltriethoxysilane-assisted synthesis of highly stabilized Ag nanoclusters",
+      "authors":"J Zhu, Q Mao, L Gao, Y He, G Song - ",
+      "journalLink":"http://pubs.rsc.org/en/journals/journalissues/an#!recentarticles&adv",
+      "journalName":"Analyst",
+      "publishYear":"2013",
+      "database":"pubs.rsc.org",
+      "databaseLink":"http://pubs.rsc.org/"
+    }
+  ]
+}

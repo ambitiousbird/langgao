@@ -6,12 +6,11 @@ body{
   h1,
   h2,
   h3,
-  h4,
-  h5
+  h4
   {
     font-family: 'Saira Extra Condensed', serif;
     font-weight: 700;
-    text-transform: uppercase;
+    // text-transform: uppercase;
     color: #343a40;
   }
   
@@ -56,6 +55,10 @@ body{
   .list-icons {
     font-size: 4rem;
   }
+
+  ul.list-inline {
+    display: inline;
+  }
   
   .list-icons .list-inline-item i:hover {
     color: #BD5D38;
@@ -72,9 +75,6 @@ body{
   }
   
   @media (min-width: 768px) {
-    section.resume-section {
-      min-height: 100vh;
-    }
     section.resume-section .resume-item .resume-date {
       min-width: 18rem;
     }

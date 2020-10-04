@@ -1,425 +1,121 @@
-
-  <main>
-      <section class="resume-section p-lg-5 d-flex d-column ml-5 mr-5" id="about">
-      <div class="my-auto">
-          <h1 class="mb-0">Lang
-          <span class="text-primary">Gao</span>
-          </h1>
-          <div class="subheading mb-5">Manassas · VA 20110 · (267) 804-1875 ·
-          <a href="mailto:langfr.gao@gmail.com">langfr.gao@gmail.com</a>
-          </div>
-          <p class="mb-5 summary">From chemical engineering to software engineering, I’ve been an engineer 
-          enthusiastic about problem solving. With 2.5 years teaching experience and 4 years participation 
-          of research in various fields, I’m a good communicator and team builder, and have developed 
-          strong analytical thinking skills.</p>
-          <p>Solid coder in Java, C, Python, and JavaScript. Well versed in React, Node.js.</p>
-          <ul class="list-inline list-social-icons mb-0">
-          <li class="list-inline-item">
-              <a href="https://www.linkedin.com/in/lang-gao-294b1087/" target="_blank">
-              <span class="fa-stack fa-lg">
-                  <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
-              </span>
-              </a>
-          </li>
-          <li class="list-inline-item">
-              <a href="https://github.com/ambitiousbird" target="_blank">
-              <span class="fa-stack fa-lg">
-                  <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fab fa-github fa-stack-1x fa-inverse"></i>
-              </span>
-              </a>
-          </li>
-          <li class="list-inline-item">
-              <a href="https://twitter.com/gaolangfr?lang=en" target="_blank">
-              <span class="fa-stack fa-lg">
-                  <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
-              </span>
-              </a>
-          </li>
-          <li class="list-inline-item">
-              <a href="https://www.facebook.com/profile.php?id=100005123865441" target="_blank">
-              <span class="fa-stack fa-lg">
-                  <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
-              </span>
-              </a>
-          </li>
-          </ul>
-
-          <p class="mt-4" style="font-style: italic; font-weight:550">View resume as one page <a style="color: #33b5e5" target="_blank"
-          href="../../assets/pdf/Lang Gao(full stack engineer).pdf">PDF document</a></p>
+<main>
+  <section class="resume-section p-lg-5 d-flex d-column ml-5 mr-5" id="about">
+    <div class="my-auto">
+      <h4 class="mb-0">Lang (Jacob)
+        <span class="text-primary">&nbsp; Gao</span>
+      </h4>
+      <div class="subheading mb-5">Manassas · VA 20110 · (267) 804-1875 ·
+        <a href="mailto:langfr.gao@gmail.com">langfr.gao@gmail.com</a>
       </div>
-      </section>
+      <p class="mb-5 summary">{{summary}}</p>
+      <ul class="list-inline list-social-icons mb-0" *ngFor="let socialNetwork of socialNetworks">
+        <li class="list-inline-item">
+          <a href={{socialNetwork.link}} target="_blank">
+            <span class="fa-stack fa-lg">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fab fa-stack-1x fa-inverse" [ngClass]="socialNetwork.icon"></i>
+            </span>
+          </a>
+        </li>
+      </ul>
 
-      <section class="resume-section p-lg-5 d-flex flex-column ml-5 mr-5" id="education">
-              <div class="my-auto">
-                <h2 class="mb-5">Education</h2>
-      
-                <div class="resume-item d-flex flex-column flex-md-row mb-5">
-                  <div class="resume-content mr-auto">
-                    <h3 class="mb-0">Temple University</h3>
-                    <div class="subheading mb-3" style="text-transform:initial">Master of Science</div>
-                    <p>Computer Science</p>
-                    <!-- <p>GPA: 3.23</p> -->
-                  </div>
-                  <div class="resume-date text-md-right">
-                    <span class="text-primary">Jan 2016 - May 2018</span>
-                  </div>
-                </div>
-      
-                <div class="resume-item d-flex flex-column flex-md-row mb-5">
-                  <div class="resume-content mr-auto">
-                    <h3 class="mb-0">Temple University</h3>
-                    <div class="subheading mb-3" style="text-transform:initial">PhD (drop out)</div>
-                    <p>Physical Chemistry</p> 
-                  </div>
-                  <div class="resume-date text-md-right">
-                    <span class="text-primary">Sep 2014 - Dec 2015</span>
-                  </div>
-                </div>
-      
-                <div class="resume-item d-flex flex-column flex-md-row">
-                  <div class="resume-content mr-auto">
-                    <h3 class="mb-0">Hubei University</h3>
-                    <div class="subheading mb-3" style="text-transform:initial">Bachelor of Engineering</div>
-                    <p>Chemical Engineering</p>
-                  </div>
-                  <div class="resume-date text-md-right">
-                    <span class="text-primary">Sep 2010 - June 2014</span>
-                  </div>
-                </div>
-      
-              </div>
-            </section>
+      <p class="mt-4" style="font-style: italic; font-weight:550">View resume as one page <a style="color: #33b5e5"
+          target="_blank" href="../../assets/pdf/Jacob Gao.pdf">PDF document</a></p>
+    </div>
+  </section>
 
-      <section class="resume-section p-lg-5 d-flex flex-column ml-5 mr-5" id="skills">
-          <div class="my-auto">
-              <h2 class="mb-5">Skills</h2>
-              <div class="subheading mb-3">Programming Languages</div>
-              <ul class="list-inline list-icons">
-                  <li class="list-inline-item">
-                  <i class="devicon-java-plain-wordmark colored"></i>
-                  </li>
-                  <li class="list-inline-item">
-                  <i class="devicon-javascript-plain"></i>
-                  </li>
-                  <li class="list-inline-item">
-                  <i class="devicon-c-plain colored"></i>
-                  </li>
-                  <li class="list-inline-item">
-                  <i class="devicon-cplusplus-plain-wordmark colored"></i>
-                  </li>
-                  <li class="list-inline-item">
-                  <i class="devicon-python-plain-wordmark colored"></i>
-                  </li>
-                  <li class="list-inline-item">
-                  <i class="devicon-swift-plain-wordmark colored"></i>
-                  </li>
-              </ul>
-          
-              <div class="subheading mb-3">Web</div>
-                <ul class="list-inline list-icons">
-                    <li class="list-inline-item">
-                        <i class="devicon-react-original-wordmark colored"></i>
-                    </li>
-                    <li class="list-inline-item">
-                        <i class="devicon-angularjs-plain-wordmark colored"></i>
-                    </li>
-                    <li class="list-inline-item">
-                        <i class="devicon-nodejs-plain-wordmark colored"></i>
-                    </li>
-                    <li class="list-inline-item">
-                        <i class="devicon-express-original-wordmark colored"></i>
-                    </li> 
-                    <li class="list-inline-item">
-                        <i class="devicon-jquery-plain-wordmark colored"></i>
-                    </li>      
-                    <li class="list-inline-item">
-                        <i class="devicon-html5-plain-wordmark"></i>
-                    </li>
-                    <li class="list-inline-item">
-                        <i class="devicon-css3-plain-wordmark"></i>
-                    </li>
-                    <li class="list-inline-item">
-                        <i class="devicon-bootstrap-plain-wordmark colored"></i>
-                    </li>
-                </ul>
-          
-              <div class="subheading mb-3">Database</div>
-              <ul class="list-inline list-icons">
-                  <li class="list-inline-item"><i class="devicon-postgresql-plain-wordmark colored"></i></li>
-                  <li class="list-inline-item"><i class="devicon-mysql-plain-wordmark colored"></i></li>
-                  <li class="list-inline-item"><i class="devicon-mongodb-plain-wordmark colored"></i></li>
-              </ul>
-      
-              <div class="subheading mb-3">Design</div>
-              <ul class="list-inline list-icons">
-                  <li class="list-inline-item"><i class="devicon-illustrator-plain colored"></i></li>
-                  <li class="list-inline-item"><i class="devicon-photoshop-plain colored"></i></li>
-              </ul>
-          </div>
+  <section class="resume-section p-lg-5 d-flex flex-column ml-5 mr-5" id="education">
+    <div class="my-auto">
+      <h3 class="mb-5">Education</h3>
+      <div class="resume-item d-flex flex-column flex-md-row mb-5" *ngFor="let item of education">
+        <div class="resume-content mr-auto">
+          <h4 class="mb-0">{{item.university}}</h4>
+          <div class="subheading mb-3" style="text-transform:initial">{{item.degree}}</div>
+          <p>{{item.subject}}</p>
+        </div>
+        <div class="resume-date text-md-right">
+          <span class="text-primary">{{item.period}}</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="resume-section p-lg-5 d-flex flex-column ml-5 mr-5" id="skills">
+    <h3 class="mb-5">Skills</h3>
+    <div class="my-auto" *ngFor="let skill of skills">
+      <div class="subheading mb-3">{{skill.category}}</div>
+      <ul class="list-inline list-icons" *ngFor="let icon of skill.icons">
+        <li class="list-inline-item">
+          <i [ngClass]="icon"></i>
+        </li>
+      </ul>
+    </div>
   </section>
 
   <section class="resume-section p-lg-5 d-flex flex-column ml-5 mr-5" id="experience" style="height:auto">
-      <div class="my-auto">
-          <h2 class="mb-5">Experience</h2>
-          <div class="resume-item d-flex flex-column flex-md-row mb-5">
-              <div class="resume-content mr-auto">
-                  <h3 class="mb-0">Full Stack Developer</h3>
-                  <div class="subheading mb-3">Mutuality, Philadelphia, PA, US</div>
-                  <ul>
-                      <li><p>Built front-end React applications, configured servers with Node.js and Express.js, handled UI designs</p></li>
-                      <li><p>Designed and implemented multiple PostgreSQL databases for storing large amount of user data</p></li>
-                      <li><p>Configured Spring MVC and Hibernate for uploading files to databases</p></li>
-                      <li><p>Integrated messaging features with Spring JMS</p></li>
-                      <li><p>Deployed applications using AWS S3 and managed databases on AWS RDS</p></li>
-                  </ul>
-              </div>
-              <div class="resume-date text-md-right">
-                  <span class="text-primary">June 2018 - Present</span>
-              </div>
-          </div>
-  
-          <div class="resume-item d-flex flex-column flex-md-row mb-5">
-              <div class="resume-content mr-auto">
-                  <h3 class="mb-0">Software Engineer Intern</h3>
-                  <div class="subheading mb-3">Unite Filtration Equipment Co., Ltd., Wuxi, China</div>
-                  <ul>
-                      <li><p>Introduced and designed IoT system by rewriting embedded systems and developing Android applications to
-                          enable remote monitoring, and predictive maintenance and analytics which contributed to a $0.58 million PTU
-                          filtration equipment sale</p></li>
-  
-                  </ul>
-              </div>
-              <div class="resume-date text-md-right">
-                  <span class="text-primary">May 2017 - Aug 2017</span>
-              </div>
-          </div>
-  
-          <div class="resume-item d-flex flex-column flex-md-row mb-5">
-              <div class="resume-content mr-auto">
-                  <h3 class="mb-0">Teaching Assistant</h3>
-                  <div class="subheading mb-3">Temple University, Philadelphia, PA, US</div>
-                      <ul>
-                          <li>
-                            <p>Introduction to Problem Solving & Programming in Python
-                            <br> Led a weekly lab session to instruct undergraduate students in Python programming, answered questions and
-                            graded programming assignments.</p>
-                          </li>
-                          <li>
-                            <p>Computer & Network Security<br> 
-                            Instructed students in using Linux command lines and security software for assignments.</p>
-                          </li>
-                          <li>
-                            <p>Data Structures<br> 
-                            Led two weekly lab sessions for demonstrations on how to work on assignments and projects, answered questions,
-                            graded quizzes, programming assignments, projects, and exams. Held weekly office hours.</p>
-                          </li>
-                          <li>
-                            <p>General Chemistry<br> 
-                            Gave weekly recitations to help students consolidate what they learned in lectures. Gave pre-lab lectures and supervise students in each lab session, answered questions in chemistry experiments, lab reports, quizzes, and exams. Held weekly office hours.</p>
-                          </li>
-                      </ul>
-              </div>
-              <div class="resume-date text-md-right">
-                  <span class="text-primary">September 2014 - December 2016</span>
-              </div>
-          </div>
-  
-          <div class="resume-item d-flex flex-column flex-md-row">
-              <div class="resume-content mr-auto">
-                  <h3 class="mb-0">Research Assistant</h3>
-                  <div class="subheading mb-3">Temple University, Philadelphia, PA, US</div>
-                  <p>Applied surfactant-free plasmonic nanomaterials for hydrogen sensing and studied water-mineral and
-                  water-protein surfaces with nonlinear optics and MD simulations</p>
-              </div>
-              <div class="resume-date text-md-right">
-                  <span class="text-primary">May 2015 - December 2015</span>
-              </div>
-          </div>
-  
-          <div class="resume-item d-flex flex-column flex-md-row">
-              <div class="resume-content mr-auto">
-                  <h3 class="mb-0">Undergraduate Research Assistant</h3>
-                  <div class="subheading mb-3">Hubei University, Wuhan, Hubei, China</div>
-                  <p>Developed novel metallic/hybrid nanoparticles, semiconductor quantum dots, and magnetic nanomaterials for biosensing</p>
-              </div>
-              <div class="resume-date text-md-right">
-                  <span class="text-primary">June 2011 - June 2014</span>
-              </div>
-          </div>
-          <div class="resume-item d-flex flex-column flex-md-row">
-              <div class="resume-content mr-auto">
-                  <h3 class="mb-0">Engineering Intern</h3>
-                  <div class="subheading mb-3">Sinopec Yangzi Petrochemical Company Limited (wholly-owned subsidiary under China Petroleum & Chemical Corporation)</div>
-                  <p>Investigated manufacturing processes, quality control, management skills of the production of Purified Terephthalic
-                  Acid (PTA). Trained on the product quality analysis with analytical chemistry methods.</p>
-              </div>
-              <div class="resume-date text-md-right">
-                  <span class="text-primary">July 2013 - August 2013</span>
-              </div>
-          </div>
-          <div class="resume-item d-flex flex-column flex-md-row">
-              <div class="resume-content mr-auto">
-                  <h3 class="mb-0">Engineering Intern</h3>
-                  <div class="subheading mb-3">Hubei Sanonda Ltd. （merged with ADAMA Agricultural Solutions Ltd. in 2017）</div>
-                  <p>Studied the functions and structures of petrochemical equipment and related instruments for product analysis in
-                  large-scale chemical products manufacture. Explored production process of middle toxic and high active pesticides
-                  including Dichlorvos and Trichlorfon.</p>
-              </div>
-              <div class="resume-date text-md-right">
-                  <span class="text-primary">September 2012 - September 2012</span>
-              </div>
-          </div>
+    <div class="my-auto">
+      <h3 class="mb-5">Experience</h3>
+      <div class="resume-item d-flex flex-column flex-md-row mb-5" *ngFor="let item of experience">
+        <div class="resume-content mr-auto">
+          <h4 class="mb-0">{{item.title}}</h4>
+          <div class="subheading mb-3">{{item.company}}, {{item.location}}</div>
+          <ul *ngFor="let responsibility of item.responsibilities">
+            <li>
+              <p>{{responsibility}}</p>
+            </li>
+          </ul>
+        </div>
+        <div class="resume-date text-md-right">
+          <span class="text-primary">{{item.period}}</span>
+        </div>
       </div>
+    </div>
   </section>
 
   <section class="resume-section p-lg-5 d-flex flex-column ml-5 mr-5" id="projects" style="height:auto">
-          <div class="my-auto">
-            <h2 class="mb-5">Selected Projects</h2>
-  
-            <div class="resume-item d-flex flex-column flex-md-row">
-              <div class="resume-content mr-auto">
-                <h3 class="mb-0"><a href="projects.html#stonie" alt="stonie">STONIE</a></h3>
-                <div class="subheading mb-3" style="text-transform:initial">An E-commerce Website for stones</div>
-                  <ul>
-                    <li><p>Utilized CSRF for online session security and Passport middleware for unobstrusive authentication</p></li>
-                    <li><p>Implemented payment system with stripe API</p></li>
-                    <li><p>Managed user and product data with MongoDB</p></li>
-                  </ul>
-              </div>
-              <div class="resume-date text-md-right">
-                <span class="text-primary">July 2018</span>
-              </div>
-            </div>
-  
-            <div class="resume-item d-flex flex-column flex-md-row">
-              <div class="resume-content mr-auto">
-                <h3 class="mb-0" style="text-transform:initial"><a href="projects.html#lemonmusic">Lemon Music</a></h3>
-                <div class="subheading" style="text-transform:initial">React based music web application</div>
-                  <ul>
-                    <li><p>Implemented routing with React-router and used webpack for dependency graph building and bundle generation</p></li>
-                    <li><p>Configured Stylus as CSS preprocessor </p></li>
-                    <li><p>Managed states and properties of songs using Redux with actions, reducers, and store </p></li>
-                    <li><p>Made animations for music player component with react-transition-group</p></li>
-                    <li><p>Used Jsonp to fetch data from QQ Music API and React-lazyload to optimize image loading</p></li>
-                  </ul>
-              </div>
-  
-              <div class="resume-date text-md-right">
-                <span class="text-primary">June 2018</span>
-              </div>
-            </div>
-            <div class="resume-item d-flex flex-column flex-md-row">
-              <div class="resume-content mr-auto">
-                <h3 class="mb-0" style="text-transform:initial"><a href="projects.html#demographics">Smart Demographics</a></h3>
-                <div class="subheading mb-3" style="text-transform:initial">React based web application for demographic analysis of images</div>
-                  <ul>
-                    <li><p>Developed the ES6 based frontend with React Router, Redux, and Clarifai API</p></li>
-                    <li><p>Implemented backend with Node.js and Express.js, used REST to leverage the HTTP protocol</p></li>
-                    <li><p>Used Knex.js to connect to PostgreSQL database</p></li>
-                  </ul>
-              </div>
-              <div class="resume-date text-md-right">
-                <span class="text-primary">May 2018</span>
-              </div>
-            </div>
-  
-            <div class="resume-item d-flex flex-column flex-md-row">
-              <div class="resume-content mr-auto">
-                <h3 class="mb-0" style="text-transform:initial"><a href="projects.html#mci">Mild Cognitive Impairment(MCI) Analysis Toolkit Development for MCI diagnosis</a></h3>
-                <div class="subheading mb-3"></div>
-                  <ul>
-                    <li><p>Collected and analyzed acceleration data using Python for MCI diagnosis</p></li>
-                    <li><p>Designed algorithms and protocols for optimum MCI diagnosis sensitivity and efficiency</p></li>
-                  </ul>
-              </div>
-              <div class="resume-date text-md-right">
-                <span class="text-primary">Jan 2017 - Dec 2017</span>
-              </div>
-            </div>
-  
-            <div class="resume-item d-flex flex-column flex-md-row">
-              <div class="resume-content mr-auto">
-                <h3 class="mb-0" style="text-transform:initial"><a href="projects.html#wearable">Multiple wearable devices authentication based on acceleration data</a></h3>
-                <div class="subheading mb-3"></div>
-                  <ul>
-                    <li><p>Developed an android app for acceleration data collection</p></li>
-                    <li><p>Analyzed body movement patterns and generated secure cryptographic keys using Python</p></li>
-                    <li><p>Designed algorithms for unobtrusive authentication of multiple devices</p></li>
-                  </ul>
-              </div>
-              <div class="resume-date text-md-right">
-                <span class="text-primary">Jan 2017 - Dec 2017</span>
-              </div>
-            </div>
-  
-            <div class="resume-item d-flex flex-column flex-md-row">
-              <div class="resume-content mr-auto">
-                <h3 class="mb-0" style="text-transform:initial"><a href="projects.html#reasoning">Towards Learning based Reasoning Systems</a></h3>
-                <div class="subheading mb-3" style="text-transform:initial"></div>
-                  <ul>
-                    <li><p>Used decicion tree on classification of Iris flower using the Iris Plants database</p></li>
-                    <li><p>Applied Deep Neural Network on the MNIST dataset, CIFAR dataset and PASCAL VOC 2007 dataset.</p></li>
-                  </ul>
-              </div>
-              <div class="resume-date text-md-right">
-                <span class="text-primary">May 2017</span>
-              </div>
-            </div>
-  
-            <div class="resume-item d-flex flex-column flex-md-row">
-              <div class="resume-content mr-auto">
-                <h3 class="mb-0" style="text-transform:initial"><a href="projects.html#election">Election Prediction</a></h3>
-                <div class="subheading mb-3" style="text-transform:initial">A Python opinion mining project</div>
-                  <ul>
-                    <li><p>Collected and analyzed 5 Million tweets using Python and Twitter API</p></li>
-                    <li><p>Performed sentiment analysis using the open source dictionary SentiWordNet</p></li>
-                  </ul>
-              </div>
-              <div class="resume-date text-md-right">
-                <span class="text-primary">May 2016</span>
-              </div>  
-            </div>
-  
-            <a class="btn btn-info btn-rounded btn-md" href="projects.html">View More ...</a>
-          </div>
-  
-        </section>
+    <div class="my-auto">
+      <h3 class="mb-5">Side Projects</h3>
+      <div class="resume-item d-flex flex-column flex-md-row" *ngFor="let project of sideProjects">
+        <div class="resume-content mr-auto">
+          <h4 class="mb-0"><a href="projects#{{project.tag}}">{{project.name}}</a></h4>
+          <div *ngIf="project.description.length>0" class="subheading mb-3" style="text-transform:initial">
+            {{project.description}}</div>
+          <ul *ngFor="let achievement of project.achievements">
+            <li>
+              <p>{{achievement}}</p>
+            </li>
+          </ul>
+        </div>
+        <div class="resume-date text-md-right">
+          <span class="text-primary">{{project.date}}</span>
+        </div>
+      </div>
+      <a class="btn btn-info btn-rounded btn-md" href="projects.html">View More ...</a>
+    </div>
 
-        <section class="resume-section p-lg-5 d-flex flex-column ml-5 mr-5" id="publications">
-              <div class="my-auto">
-                <h2 class="mb-5">Publications</h2>
-                <ol>
-                  <li>
-                      <a href="https://www.sciencedirect.com/science/article/pii/S0956566313006544" target="_blank">
-                        <p>A Highly Selective Sensor of Cysteine with Tunable Sensitivity and Detection Window Based on Dual-emission Ag Nanoclusters</p>
-                      </a>
-                        <p>J Zhu, X Song, L Gao, Z Li, Z Liu, S Ding, S Zou… - <a href="https://www.sciencedirect.com/journal/biosensors-and-bioelectronics" target="_blank" 
-                          style="color:rgb(156, 134, 6)">Biosensors & Bioelectronics</a>, 2014 - <a href="https://www.elsevier.com/" target="_blank">Elsevier</a>  </p>
-                  </li>
-                  <li>
-                      <a href="http://pubs.rsc.org/en/Content/ArticleLanding/2013/AN/c3an36734g#!divAbstract" target="_blank"><p>
-                        Localized surface plasmon resonance light-scattering detection of Hg(II) with 3-aminopropyltriethoxysilane-assisted synthesis</p>
-                        of highly stabilized Ag nanoclusters </a>
-                        <p>J Zhu, Q Mao, L Gao, Y He, G Song - <a href="http://pubs.rsc.org/en/journals/journalissues/an#!recentarticles&adv" target="_blank" 
-                          style="color:rgb(156, 134, 6)">Analyst</a> , 2013 - <a href="http://pubs.rsc.org/" target="_blank">pubs.rsc.org</a></p>
-                  </li>
-                </ol>
-              </div>
-      </section>
+  </section>
 
-      <section class="resume-section p-lg-5 d-flex flex-column ml-5 mr-5" id="interests">
-              <div class="my-auto">
-                <h2 class="mb-5">Interests</h2>
-                <p>Apart from being a web developer, I enjoy most of my time being outdoors. In the winter, I am an avid skiier and novice
-                  ice climber. During the warmer months here in Philadelphia, I enjoy mountain biking, free climbing, and running.</p>
-                <p class="mb-4">When forced indoors, I follow a number of action and Sci-Fi movies and television shows, I am an aspiring chef,
-                  and I spend a large amount of my free time exploring the latest technolgy advancements in Artificial Intelligence and Robotics.
-                </p>
-              </div>
-            </section>
+  <section class="resume-section p-lg-5 d-flex flex-column ml-5 mr-5" id="publications">
+    <div class="my-auto">
+      <h3 class="mb-5">Publications</h3>
+      <ul *ngFor="let paper of publications">
+        <li>
+          <h5>
+            <a href="paper.link" target="_blank">
+              {{paper.title}}
+            </a>
+          </h5>
+          <p>
+            {{paper.authors}}
+            <a href={{paper.journalLink}} target="_blank">{{paper.journalName}}</a>
+            {{paper.publishYear}} -
+            <a
+              href={{paper.databaseLink}} target="_blank">{{paper.database}}
+            </a> 
+          </p>
+        </li>
+      </ul>
+    </div>
+  </section>
 
-  </main>
+</main>

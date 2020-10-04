@@ -1,43 +1,47 @@
 @import url('https://fonts.googleapis.com/css?family=Lora&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Quicksand:300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,300&display=swap');
 
-.front-page{
-
-    img{
-        // max-width:100vh;
-        width:100%;
-    }
+.front-page {
+  img {
+    max-width: 100%;
+  }
 }
 
-.profile-container{
-    min-height: 100vh;
+.profile-container {
+  min-height: 100vh;
+  margin: 40px 0;
+
+  .profile {
+    width: 40%;
     margin: 40px 0;
-    .profile{
-        width:40%;
-        margin: 40px 0;
-        @media only screen and (max-width:500px){
-            width:100%;
-            margin: auto 20px; 
-        }
+
+    @media only screen and (max-width:500px) {
+      width: 100%;
+      margin: auto 20px;
     }
-    
-    #about-me{
-        width: 75%;
-        margin:auto;
-        h1{
-            font-family: 'Raleway', sans-serif;
-            align-content: justify;
-        }
-        h5{
-            font-size: 1.5em;
-            font-family: 'Quicksand', sans-serif;
-            align-content: justify;
-        }
-        @media only screen and (max-width: 408px){
-            h5{
-                font-size: 1em;
-                margin-top: 30px;
-            }
-        }
+  }
+
+  #about-me {
+    width: 75%;
+    margin: auto;
+
+    h1 {
+      font-family: 'Raleway', sans-serif;
+      align-content: justify;
     }
+
+    h5 {
+      font-size: 1.2em;
+      font-family: 'Quicksand', sans-serif;
+      align-content: justify;
+    }
+
+    @media only screen and (max-width: 408px) {
+      h5 {
+        font-size: 1em;
+        margin-top: 30px;
+      }
+    }
+  }
 }
