@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-pagenotfound',
@@ -6,10 +7,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pagenotfound.component.scss']
 })
 export class PagenotfoundComponent implements OnInit {
-
-  constructor() { }
+  countdown = 10;
+  interval:any;
+  constructor(private router:Router) { }
 
   ngOnInit() {
+    this.interval = setInterval(()=>{
+      this.countdown--;
+      if(this.countdown<=0){
+        this.router.navigate(['/']);
+      }
+    },1000);
   }
 
+  ngOnDestroy(){
+    if (this.interval) {
+      clearInterval(this.interval);
+    }
+  }
 }
