@@ -182,6 +182,7 @@
       flex: 1 100%;
     }
     .image-container{
+      width:100%;
       img{
         margin:auto;
       }
@@ -202,6 +203,12 @@
     }
     .project-content, .image-container{
       width:100%;
+    }
+  }
+
+  #machine-learning{
+    .image-container{
+      margin-left: 4%;
     }
   }
 
