@@ -37,9 +37,8 @@
       align-content: justify;
     }
 
-    @media only screen and (max-width: 408px) {
-      h5 {
-        font-size: 1em;
+    @media only screen and (max-width:767px){
+      h5{
         margin-top: 30px;
       }
     }
