@@ -70,11 +70,13 @@
 
   <ng-template #otherTopics>
     <div class="row d-flex justify-content-center" *ngFor="let project of topic.projects">
-      <!-- <div class="mb-lg-0 mb-5" [ngClass]="topic.id === 'mobile'? 'col-lg-5':'col-lg-6'"> -->
       <div id={{project.id}} class="row rounded " [ngClass]="{'table-cell col-md-6 col-xl-5': topic.id=='wearable-systems'}">
         <div class="view rounded image-container overlay">
           <img src="./../../assets/img/projects/{{project.img}}" alt="Sample project image"
-            class="img-fluid rounded z-depth-1" [ngClass]="{'mobile-demo': project.name === 'Lemon Music'}">
+            class="img-fluid rounded z-depth-1" *ngIf="project.name != 'Lemon Music'">
+          <video  alt="Sample project video" autoplay loop  class="img-fluid rounded z-depth-1 mobile-demo" *ngIf="project.name == 'Lemon Music'">
+            <source src="./../../assets/img/projects/{{project.video}}" type="video/mp4">
+          </video>
           <div class="mask waves-light" mdbWavesEffect></div>
         </div>
 

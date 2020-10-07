@@ -204,7 +204,7 @@
             "greeting":"Stay tuned for more Apps!",
             "projects":[
                 {
-                    "img":"Lemon Music.gif",
+                    "video":"lemon-music.mp4",
                     "id":"lemon-music",
                     "name":"Lemon Music",
                     "description":"A music web app built with React + React-Router + Redux + ES6 + Webpack",
