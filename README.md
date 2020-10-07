@@ -1,10 +1,27 @@
 # Langgao
 Visit the live website at www.langgao.info.
+
 This is a remake of the previous langgao.info website with Angular 8 and Angular Materials. This version aims to reduce redundant code and promote code reuse while also boost performace. 
 
 The project is 100% jQuery Free!
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.1.
+
+## 2.0.0 (10-07-2020)
+
+Features:
+
+  - move large chunk of text into json files and reduce template file size with Angular directives
+  - update resume
+  - update not found page: change design and add timer and auto-redirection
+
+Fix:
+  
+  - responsiveness issue of the projects page
+  - scrolling issue on the carousel in projects page when in mobile mode
+
+
+
 
 ## Development server
 
