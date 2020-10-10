@@ -1,4 +1,5 @@
-# Langgao
+# Responsive Angular Portfolio Website
+
 Visit the live website at www.langgao.info.
 
 This is a remake of the previous langgao.info website with Angular 8 and Angular Materials. This version aims to reduce redundant code and promote code reuse while also boost performace. 
