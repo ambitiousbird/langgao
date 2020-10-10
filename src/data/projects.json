@@ -35,7 +35,7 @@
         {
             "name":"Web Development Demos",
             "id":"web",
-            "greeting":"Full stack web development with React, Nodejs, Express, MongoDB, and more",
+            "greeting":"Full stack web development with React, Nodejs, Express, MongoDB, and more <br> (2018 and before)",
             "projects":[
                 {
                     "source": "../../assets/img/projects/stonie.mp4",

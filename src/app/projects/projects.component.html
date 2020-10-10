@@ -20,7 +20,7 @@
 
 <section id={{topic.id}} class="text-center my-5" *ngFor="let topic of topics;let i = index">
   <h2 class="h1-responsive font-weight-bold my-5">{{topic.name}}</h2>
-  <p class="grey-text w-responsive mx-auto mb-5">{{topic.greeting}}</p>
+  <p class="grey-text w-responsive mx-auto mb-5" innerHTML={{topic.greeting}}></p>
   <div *ngIf="topic.name === 'Web Development Demos'; else otherTopics" class="section-content">
     <mdb-carousel [isControls]="true" class="carousel-multi-item multi-animation" [type]="'carousel-multi-item'"
       [animation]="'slide'">
