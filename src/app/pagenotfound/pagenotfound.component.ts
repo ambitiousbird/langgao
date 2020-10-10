@@ -8,19 +8,19 @@ import { Router } from '@angular/router';
 })
 export class PagenotfoundComponent implements OnInit {
   countdown = 10;
-  interval:any;
-  constructor(private router:Router) { }
+  interval: any;
+  constructor(private router: Router) { }
 
   ngOnInit() {
-    this.interval = setInterval(()=>{
+    this.interval = setInterval(() => {
       this.countdown--;
-      if(this.countdown<=0){
+      if (this.countdown <= 0) {
         this.router.navigate(['/']);
       }
-    },1000);
+    }, 1000);
   }
 
-  ngOnDestroy(){
+  ngOnDestroy() {
     if (this.interval) {
       clearInterval(this.interval);
     }
