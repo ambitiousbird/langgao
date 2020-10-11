@@ -90,7 +90,7 @@
           <span class="text-primary">{{project.date}}</span>
         </div>
       </div>
-      <a class="btn btn-info btn-rounded btn-md" href="projects.html">View More ...</a>
+      <a class="btn btn-info btn-rounded btn-md" href="/projects">View More ...</a>
     </div>
 
   </section>
@@ -101,7 +101,7 @@
       <ul *ngFor="let paper of publications">
         <li>
           <h5>
-            <a href="paper.link" target="_blank">
+            <a href="{{paper.link}}" target="_blank">
               {{paper.title}}
             </a>
           </h5>
