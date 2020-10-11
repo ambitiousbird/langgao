@@ -1,4 +1,5 @@
-# Langgao
+# Responsive Angular Portfolio Website
+
 Visit the live website at www.langgao.info.
 
 This is a remake of the previous langgao.info website with Angular 8 and Angular Materials. This version aims to reduce redundant code and promote code reuse while also boost performace. 
@@ -6,6 +7,13 @@ This is a remake of the previous langgao.info website with Angular 8 and Angular
 The project is 100% jQuery Free!
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.1.
+
+## 2.0.1 (10-09-2020)
+
+Fix:
+
+  - responsiveness issue of the not found page
+  - footer link href link
 
 ## 2.0.0 (10-07-2020)
 
