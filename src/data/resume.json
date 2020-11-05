@@ -52,8 +52,8 @@
     {
       "category":"Web",
       "icons":[
+        "devicon-angularjs-plain colored",
         "devicon-react-original-wordmark colored",
-        "devicon-angularjs-plain-wordmark colored",
         "devicon-nodejs-plain-wordmark colored",
         "devicon-express-original-wordmark colored",
         "devicon-jquery-plain-wordmark colored",
