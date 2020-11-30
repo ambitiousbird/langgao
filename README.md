@@ -8,6 +8,12 @@ The project is 100% jQuery Free!
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.1.
 
+## 2.1.0 (11-29-2020)
+
+Features:
+
+  - add a toggle to temprarily shut off the website (when off, the website shows a 'under construction' message)
+  
 ## 2.0.1 (10-09-2020)
 
 Fix:
