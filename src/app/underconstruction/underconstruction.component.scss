@@ -1,25 +1,19 @@
-.img-container{
-    position: relative;
-    h2{
-        z-index: 2;
-        position: absolute;
-        top: 5%;
-        left: 0;
-        right: 0;
-        width: 100%;
-        text-align: center;
-        color:white;
-        font-weight: bolder;
-    }
+.img-container {
+  position: relative;
 
-    img{
-        z-index: 1;
-        width: 100%;
-        max-height: 800px;
-        object-fit: cover;
-        top:0;
-        right:0;
-        bottom:0;
-        left:0;
-    }
+  h2 {
+    position: absolute;
+    top: 5%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: white;
+    font-weight: bolder;
+  }
+
+  img {
+    width: 100%;
+    max-height: 800px;
+    object-fit: cover;
+  }
 }
