@@ -1,0 +1,21 @@
+.img-container {
+  div {
+    margin: 20px auto;
+    position: absolute;
+    color: white;
+
+    h2 {
+      top: 50%;
+      left: 50%;
+      margin-right: -50%;
+      transform: translate(50%, 50%);
+      font-weight: bolder;
+    }
+  }
+}
+
+img {
+  width: 100%;
+  max-height: 800px;
+  object-fit: cover;
+}

@@ -2,9 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-pagenotfound',
-  templateUrl: './pagenotfound.component.html',
-  styleUrls: ['./pagenotfound.component.scss']
+  selector: 'app-page-not-found',
+  templateUrl: './page-not-found.component.html',
+  styleUrls: ['./page-not-found.component.scss']
 })
 export class PagenotfoundComponent implements OnInit {
   countdown = 10;

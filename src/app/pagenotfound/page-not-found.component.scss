@@ -1,0 +1,26 @@
+div {
+  min-height: 75vh;
+
+  >* {
+    margin: 20px 0 20px 0;
+  }
+
+  h1 {
+    font-weight: bolder;
+    font-size: 5em;
+    font-style: italic;
+    color: rgb(26, 83, 53);
+  }
+
+  p {
+    color: rgb(185, 66, 66);
+    display: inline;
+  }
+}
+
+@media only screen and (max-width:767px) {
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
